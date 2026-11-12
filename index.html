@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Germany Christmas Magic — Wife's Birthday Trip</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f0f2f5;color:#1f2937;line-height:1.5}
+@font-face{font-family:'Inter';font-style:normal;font-weight:400 700;src:url(https://fonts.gstatic.com/s/inter/v18/UcC73FwrK3iLTeHuS_fjQt4P1RTh3qRfDkP1lnC.woff2) format('woff2');font-display:swap}
+
+/* Hero slideshow */
+html{scroll-behavior:smooth}
+.hero{position:relative;height:100vh;height:100dvh;min-height:500px;overflow:hidden;display:flex;align-items:center;justify-content:center;color:#fff;text-align:center}
+.hero-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.2s ease}
+.hero-slide.active{opacity:1}
+.hero-slide::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(11,59,70,.7) 0%,rgba(26,122,110,.4) 100%)}
+.hero-content{position:relative;z-index:2;padding:1.5rem;animation:fadeUp .8s ease .3s both}
+.hero-content h1{font-size:clamp(1.8rem,5vw,3rem);font-weight:700;letter-spacing:-.03em;margin-bottom:.5rem;text-shadow:0 2px 20px rgba(0,0,0,.3)}
+.hero .sub{font-size:clamp(.9rem,2vw,1.15rem);opacity:.95;margin-bottom:.3rem}
+.hero .meta{font-size:.85rem;opacity:.8;margin-top:.8rem}
+.hero-dots{position:absolute;bottom:4rem;left:50%;transform:translateX(-50%);display:flex;gap:.6rem;z-index:2}
+.hero-dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.4);cursor:pointer;transition:background .3s}
+.hero-dot.active{background:#fff;transform:scale(1.2)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.hero-arrow{position:absolute;bottom:8.5rem;left:50%;transform:translateX(-50%);z-index:3;background:rgba(255,255,255,.15);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.2);color:#fff;font-size:1.2rem;width:44px;height:44px;border-radius:22px;display:flex;align-items:center;justify-content:center;cursor:pointer;animation:floatArrow 2.5s ease-in-out infinite;transition:background .3s}
+.hero-arrow:hover{background:rgba(255,255,255,.25)}
+@keyframes floatArrow{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(10px)}}
+
+/* Plan */
+.container{max-width:900px;margin:0 auto;padding:1.2rem;scroll-margin-top:3.5rem}
+.plan-title{font-size:.9rem;color:#6b7280;margin-bottom:.2rem;font-weight:500}
+.plan-sub{font-size:.78rem;color:#9ca3af;margin-bottom:1rem}
+
+/* Day cards */
+.day{background:#fff;border-radius:16px;margin-bottom:1.5rem;box-shadow:0 1px 3px rgba(0,0,0,.06),0 1px 2px rgba(0,0,0,.04);overflow:hidden;transition:box-shadow .2s}
+.day:hover{box-shadow:0 4px 12px rgba(0,0,0,.08),0 2px 4px rgba(0,0,0,.04)}
+.day-header{padding:1rem 1.2rem;font-weight:700;font-size:1.05rem;display:flex;align-items:center;gap:.6rem}
+.day1 .day-header{background:#ecfdf5;color:#065f46}
+.day2 .day-header{background:#fef3c7;color:#92400e}
+.day3 .day-header{background:#ede9fe;color:#5b21b6}
+.day-header span{font-size:1.2rem}
+.stop{display:flex;flex-flow:row wrap;padding:.85rem 1.2rem;border-top:1px solid #f3f4f6;gap:0;transition:background .15s;position:relative}
+.stop:hover{background:#fafafa}
+.stop:last-child{border-bottom:none}
+.stop-time{font-weight:600;font-size:.82rem;color:#6b7280;flex:1 1 100%;margin-bottom:.3rem}
+.stop-icon{position:absolute;left:1.2rem;top:2.2rem;font-size:1rem}
+.stop-detail{flex:1;min-width:0;padding:0 1.6rem}
+.stop-name{font-weight:600;font-size:.92rem;color:#111827}
+.stop-desc{font-size:.8rem;color:#6b7280;margin-top:2px;line-height:1.45}
+.stop-drive{font-size:.72rem;color:#9ca3af;margin-top:2px;font-style:italic}
+.stop-acts{display:flex;flex-direction:column;gap:2px;min-width:0;background:#f0faf5;border:1px solid #bbf7d0;border-radius:8px;padding:6px 10px 8px;margin:6px 0 0}
+.acts-heading{font-size:.6rem;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:#16a34a;width:100%;margin-bottom:2px}
+.act-badge,.act-link{display:inline-flex;align-items:center;gap:3px;padding:1px 7px;border-radius:10px;font-size:.68rem;font-weight:500;white-space:nowrap;line-height:1.6;text-decoration:none}
+.stop-acts>.act-badge,.act-row{display:flex;align-items:center;gap:6px;width:100%;min-width:0;border-left:3px solid;padding:3px 8px;border-radius:0 4px 4px 0;margin:0}
+.act-row>.act-badge{flex:1;border-left:none;padding:1px 4px}
+.act-book{display:inline-flex;align-items:center;font-size:.6rem;font-weight:600;text-transform:uppercase;letter-spacing:.5px;border:1px solid;border-radius:6px;padding:2px 10px;text-decoration:none;cursor:pointer;transition:all .15s;white-space:nowrap;line-height:1.5;color:inherit}
+a.act-book:hover{background:#1e40af;color:#fff;border-color:#1e40af}
+.act-couple{background:#eff6ff;color:#1e40af}
+.act-baby{background:#fef3c7;color:#b45309}
+.must-see{display:inline-block;background:#fef3c7;color:#92400e;font-size:.65rem;font-weight:600;padding:.1rem .4rem;border-radius:20px;margin-left:.4rem;vertical-align:middle;letter-spacing:.02em;line-height:1.4}
+.cafe-tag{display:inline-block;background:#fef3c7;color:#92400e;font-size:.7rem;padding:.12rem .45rem;border-radius:20px;margin-left:.3rem;font-weight:500}
+.birthday-tag{display:inline-block;background:#fce7f3;color:#be185d;font-size:.7rem;padding:.12rem .45rem;border-radius:20px;margin-left:.3rem;font-weight:500}
+.safety-tag{display:inline-block;background:#fee2e2;color:#b91c1c;font-size:.68rem;padding:.12rem .45rem;border-radius:20px;margin-left:.3rem;font-weight:600}
+.stop-imgs{display:flex;gap:8px;min-width:0;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;touch-action:pan-x;overscroll-behavior-x:contain;margin-top:8px;padding-bottom:4px;cursor:default}
+.stop-imgs img{flex:0 0 auto;width:200px;height:140px;object-fit:cover;border-radius:10px;cursor:zoom-in;scroll-snap-align:start;transition:transform .3s ease,box-shadow .3s ease}
+.stop-imgs img:hover{transform:scale(1.02);box-shadow:0 4px 20px rgba(0,0,0,.12)}
+@media(max-width:600px){.stop-imgs img{width:160px;height:120px}}
+
+/* Lightbox */
+#lightbox{display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.85);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);justify-content:center;align-items:center;padding:2rem;animation:fadeIn .25s ease;touch-action:none}
+#lightbox.active{display:flex}
+#lightbox img{max-width:100%;max-height:85vh;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,.5);object-fit:contain;pointer-events:auto}
+#lightbox .close{position:absolute;top:1.5rem;right:2rem;color:#fff;font-size:2rem;cursor:pointer;width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.15);border-radius:50%;transition:background .2s;line-height:1;z-index:3}
+#lightbox .close:hover{background:rgba(255,255,255,.3)}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);z-index:2;color:#fff;font-size:clamp(2rem,6vw,3.5rem);cursor:pointer;width:clamp(44px,12vw,64px);height:clamp(60px,20vw,90px);display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.15);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);border:none;transition:background .2s;user-select:none;-webkit-user-select:none;touch-action:manipulation}
+.lb-nav:hover{background:rgba(0,0,0,.35)}
+.lb-prev{left:0;border-radius:0 8px 8px 0;padding-right:4px}
+.lb-next{right:0;border-radius:8px 0 0 8px;padding-left:4px}
+.lb-counter{position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);color:#fff;font-size:.82rem;background:rgba(0,0,0,.4);padding:.3rem .9rem;border-radius:20px;pointer-events:none;z-index:2}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
+/* Info boxes */
+.info-box{background:#fff;border-radius:16px;padding:1.2rem;box-shadow:0 1px 3px rgba(0,0,0,.06),0 1px 2px rgba(0,0,0,.04);margin-bottom:1.2rem}
+.info-box h3{font-size:.95rem;font-weight:700;margin-bottom:.6rem;color:#111827;display:flex;align-items:center;gap:.4rem}
+.info-box ul{list-style:none;font-size:.84rem;color:#4b5563}
+.info-box li{padding:.3rem 0;display:flex;gap:.5rem;align-items:baseline}
+.info-box li::before{content:"\2022";color:#2a9d8f;font-weight:bold}
+.info-box a{color:#1a73e8;text-decoration:none}
+.info-box a:hover{text-decoration:underline}
+.safety-box{background:#fef2f2;border:1px solid #fecaca}
+.safety-box h3{color:#b91c1c}
+.safety-box li::before{content:"\2022";color:#dc2626}
+.safety-ok{background:#f0fdf4;border:1px solid #bbf7d0}
+.safety-ok h3{color:#16a34a}
+.safety-ok li::before{content:"\2022";color:#16a34a}
+
+/* Map */
+.map-section{background:#fff;border-radius:16px;box-shadow:0 1px 3px rgba(0,0,0,.06),0 1px 2px rgba(0,0,0,.04);overflow:hidden;margin-bottom:1.5rem}
+.map-section .map-h{padding:1rem 1.2rem;font-size:.95rem;font-weight:600}
+.map-section iframe{width:100%;height:380px;border:none;display:block}
+.map-link{display:block;text-align:center;padding:.8rem;background:#1a73e8;color:#fff;text-decoration:none;font-weight:600;font-size:.88rem;transition:background .2s}
+.map-link:hover{background:#1557b0}
+
+/* Transport table */
+.pt-table{width:100%;border-collapse:collapse;font-size:.78rem;color:#4b5563;margin-top:.4rem}
+.pt-table th{font-size:.62rem;text-transform:uppercase;letter-spacing:.5px;color:#9ca3af;text-align:left;padding:.35rem .5rem;border-bottom:2px solid #e5e7eb}
+.pt-table td{padding:.4rem .5rem;border-bottom:1px solid #f3f4f6;vertical-align:top}
+.pt-table tr:last-child td{border-bottom:none}
+.pt-table .pt-day{font-weight:600;white-space:nowrap}
+.pass-tag{display:inline-block;font-size:.62rem;font-weight:600;padding:.12rem .45rem;border-radius:20px;white-space:nowrap}
+.pass-inc{background:#ecfdf5;color:#059669}
+.pass-off{background:#fef3c7;color:#b45309}
+.pt-note{font-size:.82rem;color:#4b5563;margin-top:.6rem;line-height:1.5}
+.pt-note a{color:#1a73e8;text-decoration:none}
+.pt-note a:hover{text-decoration:underline}
+.pt-note+.pt-note{margin-top:.35rem}
+@media(max-width:600px){.pt-table{font-size:.72rem}.pt-table td,.pt-table th{padding:.3rem .4rem}}
+
+.footer{text-align:center;padding:1.5rem;font-size:.78rem;color:#9ca3af}
+@media(max-width:600px){
+.stop{padding:.5rem .8rem}.stop-icon{display:none}#lightbox{padding:1rem}
+.map-section iframe{height:280px}
+.hero{min-height:400px}
+.act-row{flex-direction:column;align-items:stretch;gap:4px}
+.act-row>.act-badge{white-space:normal}
+.hero-arrow{bottom:7rem}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== HERO SLIDESHOW ===== -->
+<div class="hero">
+<div class="hero-slide active" style="background-image:url(https://images.pexels.com/photos/29705584/pexels-photo-29705584.jpeg?auto=compress&cs=tinysrgb&w=1600)"><span style="position:absolute;bottom:7rem;right:1rem;z-index:3;background:rgba(0,0,0,.5);color:#fff;font-size:.72rem;padding:.25rem .55rem;border-radius:20px">&#128205; Marienplatz Christmas Market</span></div>
+<div class="hero-slide" style="background-image:url(https://images.pexels.com/photos/4963634/pexels-photo-4963634.jpeg?auto=compress&cs=tinysrgb&w=1600)"><span style="position:absolute;bottom:7rem;right:1rem;z-index:3;background:rgba(0,0,0,.5);color:#fff;font-size:.72rem;padding:.25rem .55rem;border-radius:20px">&#128205; Neuschwanstein Castle</span></div>
+<div class="hero-slide" style="background-image:url(https://images.pexels.com/photos/40387184/pexels-photo-40387184.jpeg?auto=compress&cs=tinysrgb&w=1600)"><span style="position:absolute;bottom:7rem;right:1rem;z-index:3;background:rgba(0,0,0,.5);color:#fff;font-size:.72rem;padding:.25rem .55rem;border-radius:20px">&#128205; Nymphenburg Palace</span></div>
+<div class="hero-content">
+<h1>Germany Christmas Magic</h1>
+<p class="sub">Dublin &rarr; Munich &rarr; Nuremberg &rarr; Dublin</p>
+<p class="meta">Sat 22 &ndash; Mon 24 Nov 2026 &bull; 3 travellers (wife's birthday &#10084;) &bull; baby-friendly &bull; vegan/vegetarian</p>
+</div>
+<div class="hero-dots">
+<span class="hero-dot active"></span><span class="hero-dot"></span><span class="hero-dot"></span>
+</div>
+<button class="hero-arrow" onclick="document.querySelector('.container').scrollIntoView({behavior:'smooth'})">&#8595;</button>
+</div>
+
+<!-- ===== ITINERARY ===== -->
+<div class="container">
+
+<p class="plan-title">Bavaria, Germany &bull; Sat 22 &ndash; Mon 24 Nov 2026</p>
+<p class="plan-sub">Dublin &rarr; Munich (base) &rarr; Nuremberg day trip &rarr; Dublin &bull; 3 days &bull; wife's birthday celebration &bull; stroller-safe routes &bull; 100% plant-based dining</p>
+
+<!-- ====== SAFETY NOTICE ====== -->
+<div class="info-box safety-box">
+<h3>&#9888;&#65039; Safety Briefing</h3>
+<ul>
+<li><strong>Munich</strong> is Germany's safest major city (top of police stats 7 years running) and rated LOW-threat by US OSAC. The right choice for a family with a baby.</li>
+<li><strong>Avoid Berlin</strong> — multiple protests on Nov 14, 20, 25 including youth "Gen Z regelt" demos with reported violence. MEDIUM-threat location.</li>
+<li><strong>Nov 20 (Thursday)</strong>: "Gen Z regelt" protests in Munich city center. <strong>Day 1 is Sat Nov 22</strong> — well clear of protest dates.</li>
+<li><strong>Germany national terror level</strong> = "high" (upgraded July 2026) — this is standard national posture. Christmas markets have enhanced security with visible police presence. No specific threats to Munich.</li>
+<li><strong>Petty crime</strong>: Watch for pickpockets at Christmas markets and Hauptbahnhof. Keep passports/baby documents in hotel safe.</li>
+<li><strong>Stroller-friendly</strong>: Munich has wide sidewalks, smooth paving, lifts at stations. Most attractions are accessible.</li>
+</ul>
+</div>
+
+<div class="day day1">
+<div class="day-header"><span>&#9992;&#65039;</span> Day 1 &mdash; Sat 22 Nov &middot; Arrival, Marienplatz &amp; Christmas Markets</div>
+
+<div class="map-section">
+<div class="map-h">&#128205; Dublin Airport &rarr; Munich Airport &rarr; Marienplatz</div>
+<iframe loading="lazy" src="https://maps.google.com/maps?saddr=Dublin+Airport&daddr=Munich+Airport+to:Marienplatz+Munich&output=embed" allowfullscreen></iframe>
+<a class="map-link" href="https://www.google.com/maps/dir/Dublin+Airport/Munich+Airport/Marienplatz+Munich" target="_blank">Open route in Google Maps</a>
+</div>
+
+<div class="stop">
+<div class="stop-time">08:00</div><div class="stop-icon">&#9992;&#65039;</div>
+<div class="stop-detail"><div class="stop-name">Depart Dublin (DUB)</div><div class="stop-desc">Morning flight to Munich — Aer Lingus or Ryanair direct, ~2h15. Pack layers (Nov in Munich is 2&ndash;8°C), baby carrier, stroller, passport and EU Health Insurance Card for baby.</div></div>
+</div>
+<div class="stop">
+<div class="stop-time">11:15</div><div class="stop-icon">&#128739;</div>
+<div class="stop-detail"><div class="stop-name">Arrive Munich Airport (MUC)</div><div class="stop-desc">S-Bahn S1 or S8 direct to Munich Hauptbahnhof (~40 min, €4.30). Baby-changing facilities at airport and all major stations.</div><div class="stop-drive">Train &middot; S-Bahn S1/S8, ~40 min to city center</div></div>
+</div>
+<div class="stop">
+<div class="stop-time">12:30</div><div class="stop-icon">&#127968;</div>
+<div class="stop-detail"><div class="stop-name">Check in &amp; drop bags</div><div class="stop-desc">Hotel near Marienplatz or Hauptbahnhof — both areas are stroller-friendly with wide sidewalks. Ask for ground floor or elevator access for the pram. Store passports and baby documents in the safe.</div></div>
+</div>
+<div class="stop">
+<div class="stop-time">13:15</div><div class="stop-icon">&#127860;</div>
+<div class="stop-detail"><div class="stop-name">Lunch: Max Pett</div><div class="stop-desc">Munich's iconic vegan restaurant near Sendlinger Tor — extensive menu with soups, bowls, schnitzel, desserts. Great for first lunch: everything plant-based, relaxed atmosphere, 10 min walk from Marienplatz.</div><div class="stop-drive">Walk &middot; 10 min from city center</div></div>
+</div>
+<div class="stop">
+<div class="stop-time">14:30</div><div class="stop-icon">&#127756;</div>
+<div class="stop-detail"><div class="stop-name">Marienplatz &amp; New Town Hall <span class="must-see">&#9733; Must-See</span></div><div class="stop-desc">Munich's heart — the Gothic New Town Hall with its Glockenspiel (shows at 11:00, 12:00, 17:00). The Christmas market stalls are already up from Nov 20. Stroller-friendly square with smooth paving. Watch the figures, admire the lights.</div>
+<div class="stop-imgs"><img src="https://images.pexels.com/photos/29705584/pexels-photo-29705584.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Munich Christmas Market at Marienplatz" loading="lazy"><img src="https://images.pexels.com/photos/29705588/pexels-photo-29705588.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Crowded Christmas market Marienplatz Munich" loading="lazy"></div>
+<div class="stop-acts"><div class="acts-heading">&#127919; Activities</div><span class="act-badge act-couple">&#128100; Watch the Glockenspiel show together</span></div></div>
+</div>
+<div class="stop">
+<div class="stop-time">15:30</div><div class="stop-icon">&#127872;</div>
+<div class="stop-detail"><div class="stop-name">Christkindlmarkt Stroll <span class="birthday-tag">&#10084; Birthday</span></div><div class="stop-desc">The main Christmas market (open Nov 20 &ndash; Dec 24) with 138 wooden stalls. Warm up with <strong>hot chocolate</strong> at the stalls — no alcohol needed. The 3,000-LED Christmas tree from Sauerlach is stunning at dusk. Push the pram through the wide aisles — very family-friendly. Look for the <em>Himmelswerkstatt</em> (free kids' craft area).</div>
+<div class="stop-imgs"><img src="https://images.pexels.com/photos/29719838/pexels-photo-29719838.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Festive mug at Munich Christmas market" loading="lazy"><img src="https://images.pexels.com/photos/29719844/pexels-photo-29719844.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Christmas market spinner lights Munich" loading="lazy"></div>
+<div class="stop-acts"><div class="acts-heading">&#127919; Activities</div><span class="act-badge act-couple">&#128100; Christmas market stroll with hot chocolate</span></div></div>
+</div>
+<div class="stop">
+<div class="stop-time">17:00</div><div class="stop-icon">&#127963;</div>
+<div class="stop-detail"><div class="stop-name">Frauenkirche</div><div class="stop-desc">Munich's iconic twin-towered cathedral — the symbol of the city. Free to enter, short visit, right beside Marienplatz. Beautiful for a quiet photo stop before dinner.</div></div>
+</div>
+<div class="stop">
+<div class="stop-time">18:30</div><div class="stop-icon">&#127860;</div>
+<div class="stop-detail"><div class="stop-name">Birthday Dinner: Gratitude <span class="birthday-tag">&#10084; Birthday</span> <span class="cafe-tag">Vegan</span></div><div class="stop-desc"><strong>Wife's birthday dinner!</strong> Gratitude is Munich's top vegan fine-dining spot — artful plating, changing menu (chickpea curry, tempeh ravioli, grilled avocado), excellent vegan wine list. Book ahead, it's very popular. Intimate, romantic setting in Maxvorstadt. ~15 min walk or short taxi from Marienplatz.</div><div class="stop-drive">Walk &middot; 15 min from Marienplatz</div>
+<div class="stop-acts"><div class="acts-heading">&#127919; Activities</div><div class="act-row"><span class="act-badge act-couple">&#128100; Romantic birthday dinner</span><span class="act-book" style="background:#fce7f3;color:#be185d;border-color:#fce7f3">Book ahead</span></div></div></div>
+</div>
+<div class="stop">
+<div class="stop-time">20:30</div><div class="stop-icon">&#127820;</div>
+<div class="stop-detail"><div class="stop-name">Evening Christmas Market Glow</div><div class="stop-desc">Return to Marienplatz after dark — the Christmas market is even more magical with all the lights on. A short stroll back to the hotel with the baby asleep in the carrier.</div></div>
+</div>
+</div>
+
+<div class="day day2">
+<div class="day-header"><span>&#128205;</span> Day 2 &mdash; Sun 23 Nov &middot; Nuremberg Christmas Market Day Trip</div>
+
+<div class="map-section">
+<div class="map-h">&#128205; Munich &rarr; Nuremberg &rarr; Munich</div>
+<iframe loading="lazy" src="https://maps.google.com/maps?saddr=Munich&daddr=Nuremberg&output=embed" allowfullscreen></iframe>
+<a class="map-link" href="https://www.google.com/maps/dir/Munich+Nuremberg?travelmode=transit" target="_blank">Open transit route in Google Maps</a>
+</div>
+
+<div class="stop">
+<div class="stop-time">07:30</div><div class="stop-icon">&#128646;</div>
+<div class="stop-detail"><div class="stop-name">Train to Nuremberg</div><div class="stop-desc">Early ICE from München Hbf to Nürnberg Hbf — frequent departures, comfortable with family compartments and baby-changing facilities. Book via the DB Navigator app. The city is very safe and stroller-friendly.</div><div class="stop-drive">Train &middot; ICE, ~1h18 to Nürnberg Hbf</div></div>
+</div>
+<div class="stop">
+<div class="stop-time">09:00</div><div class="stop-icon">&#127756;</div>
+<div class="stop-detail"><div class="stop-name">Nuremberg Old Town <span class="must-see">&#9733; Must-See</span></div><div class="stop-desc">Medieval half-timbered buildings, the Imperial Castle, and the fortified city walls — Nuremberg's Altstadt is one of Germany's most beautifully preserved old towns. The cobblestone streets are manageable with a stroller on the main routes. Start at the castle and work down toward Hauptmarkt.</div>
+<div class="stop-imgs"><img src="https://images.pexels.com/photos/33692842/pexels-photo-33692842.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Nuremberg old town half-timbered buildings" loading="lazy"><img src="https://images.pexels.com/photos/8405817/pexels-photo-8405817.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Nuremberg skyline with church towers" loading="lazy"></div></div>
+</div>
+<div class="stop">
+<div class="stop-time">09:45</div><div class="stop-icon">&#127909;</div>
+<div class="stop-detail"><div class="stop-name">Imperial Castle (Kaiserburg)</div><div class="stop-desc">The castle overlooking Nuremberg — the Heinrichs-Turm tower offers views over the whole old town. The castle courtyard is spacious and flat, perfect for a baby stop. Museum inside has great medieval exhibits.</div><div class="stop-acts"><div class="acts-heading">&#127919; Activities</div><span class="act-badge act-baby">&#128135; Flat courtyard — easy pram access</span></div></div>
+</div>
+<div class="stop">
+<div class="stop-time">11:00</div><div class="stop-icon">&#127872;</div>
+<div class="stop-detail"><div class="stop-name">Christkindlesmarkt, Nuremberg <span class="must-see">&#9733; Must-See</span></div><div class="stop-desc">Germany's most famous Christmas market — over 160 wooden <em>Buden</em> (booths) on Hauptmarkt. This is THE authentic German Christmas experience: <em>Nürnberger Bratwurst</em> (skip), <em>Lebkuchen</em> gingerbread (great vegan options!), roasted almonds, and the iconic <em>Nürnberger Rostbratwurst</em> market flag. The Christkind (Christ child) greets visitors in traditional costume. Hot apple juice and chai for non-drinkers. Stroller-friendly with wide market aisles.</div>
+<div class="stop-acts"><div class="acts-heading">&#127919; Activities</div><span class="act-badge act-couple">&#128100; Lebkuchen (gingerbread) hunt — find vegan ones!</span></div></div>
+</div>
+<div class="stop">
+<div class="stop-time">12:30</div><div class="stop-icon">&#127860;</div>
+<div class="stop-detail"><div class="stop-name">Lunch: Vegetarian option near Hauptmarkt</div><div class="stop-desc">Quick lunch break — Nuremberg has several vegetarian spots near the market. Look for vegan <em>Lebkuchen</em> and seasonal specials. Good café options along the market square for hot drinks and a rest with the baby.</div></div>
+</div>
+<div class="stop">
+<div class="stop-time">13:30</div><div class="stop-icon">&#127756;</div>
+<div class="stop-detail"><div class="stop-name">St. Sebald Cathedral &amp; Well</div><div class="stop-desc">Nuremberg's oldest church with a beautiful Gothic interior and the famous Sebaldus tomb. Next door is the Old Well — a 50m deep shaft with a lift down for an underground tour (skip with baby, but the exterior is worth seeing).</div></div>
+</div>
+<div class="stop">
+<div class="stop-time">14:30</div><div class="stop-icon">&#127755;</div>
+<div class="stop-detail"><div class="stop-name">Dürer House</div><div class="stop-desc">The former home of Albrecht Dürer — beautifully restored Renaissance house with a museum. Quick visit, lovely courtyard, very photogenic for the birthday photos.</div></div>
+</div>
+<div class="stop">
+<div class="stop-time">15:30</div><div class="stop-icon">&#128646;</div>
+<div class="stop-detail"><div class="stop-name">Train back to Munich</div><div class="stop-desc">Afternoon ICE back to München Hbf. Baby can nap on the train — the 1h18 ride is smooth and quiet in first class. Drop bags at hotel if checking out tomorrow.</div><div class="stop-drive">Train &middot; ICE, ~1h18 back to Munich</div></div>
+</div>
+<div class="stop">
+<div class="stop-time">17:30</div><div class="stop-icon">&#127860;</div>
+<div class="stop-detail"><div class="stop-name">Dinner: Leibspeise</div><div class="stop-desc">Established vegetarian restaurant on Türkenstrasse — daily-changing seasonal menu, strong vegan options, classic Bavarian tavern atmosphere without the meat. Exactly what you need for a cozy second dinner in Munich.</div><div class="stop-drive">Walk &middot; 15 min from Hauptbahnhof</div></div>
+</div>
+</div>
+
+<div class="day day3">
+<div class="day-header"><span>&#127828;</span> Day 3 &mdash; Mon 24 Nov &middot; Nymphenburg, English Garden &amp; Home</div>
+
+<div class="map-section">
+<div class="map-h">&#128205; Munich &rarr; Nymphenburg &rarr; English Garden &rarr; Munich Airport</div>
+<iframe loading="lazy" src="https://maps.google.com/maps?saddr=Marienplatz+Munich&daddr=Nymphenburg+Palace+to:Englischer+Garten+Munich+to:Munich+Airport&output=embed" allowfullscreen></iframe>
+<a class="map-link" href="https://www.google.com/maps/dir/Marienplatz+Munich/Nymphenburg+Palace/Englischer+Garten+Munich/Munich+Airport" target="_blank">Open route in Google Maps</a>
+</div>
+
+<div class="stop">
+<div class="stop-time">08:30</div><div class="stop-icon">&#127963;</div>
+<div class="stop-detail"><div class="stop-name">Nymphenburg Palace <span class="birthday-tag">&#10084; Birthday</span></div><div class="stop-desc"><strong>Wife's birthday surprise: Gondola ride!</strong> Munich's "Versailles" — a Baroque palace with vast formal gardens. The romantic highlight is a Venetian gondola ride along the palace canal. The park is flat and stroller-friendly. See the famous Love Tree where couples leave locks and vows. The Amalienburg hunting lodge in the park is a rococo gem.</div>
+<div class="stop-imgs"><img src="https://images.pexels.com/photos/40387184/pexels-photo-40387184.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Nymphenburg Palace Munich" loading="lazy"><img src="https://images.pexels.com/photos/40387181/pexels-photo-40387181.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Nymphenburg Palace sunset Munich" loading="lazy"><img src="https://images.pexels.com/photos/18896534/pexels-photo-18896534.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Nymphenburg Palace with fountain" loading="lazy"></div>
+<div class="stop-acts"><div class="acts-heading">&#127919; Activities</div><div class="act-row"><span class="act-badge act-couple">&#128100; Gondola ride on the palace canal</span><span class="act-book" style="background:#fce7f3;color:#be185d;border-color:#fce7f3">Book ahead</span></div></div></div>
+</div>
+<div class="stop">
+<div class="stop-time">10:30</div><div class="stop-icon">&#127806;</div>
+<div class="stop-detail"><div class="stop-name">Englischer Garten</div><div class="stop-desc">Europe's largest urban park (4x Central Park) — flat paths, perfect for the stroller. Walk to the Monopteros lookout for a view over Munich. See the Eisbach surfers riding a permanent standing wave right in the river. The Seehaus lake and beer garden is a lovely stop for hot drinks and <em>Obatzda</em> (cheese spread — vegan version available).</div>
+<div class="stop-acts"><div class="acts-heading">&#127919; Activities</div><span class="act-badge act-baby">&#128135; Monopteros hill — gentle slope, great pram push</span></div></div>
+</div>
+<div class="stop">
+<div class="stop-time">12:00</div><div class="stop-icon">&#127860;</div>
+<div class="stop-detail"><div class="stop-name">Lunch: Bodhi</div><div class="stop-desc">One of Munich's best vegan spots — classic Bavarian tavern atmosphere (<em>Wirtshausatmosphäre</em>) with a fully plant-based menu. Traditional feels with modern vegan dishes. Perfect for a final lunch in the city.</div></div>
+</div>
+<div class="stop">
+<div class="stop-time">13:00</div><div class="stop-icon">&#127968;</div>
+<div class="stop-detail"><div class="stop-name">Checkout &amp; last souvenir run</div><div class="stop-desc">Drop bags at hotel if not already done. Quick trip to Kaufingerstrasse (pedestrian shopping street from Marienplatz) for last-minute souvenirs — German Christmas ornaments, Lebkuchen to take home.</div></div>
+</div>
+<div class="stop">
+<div class="stop-time">14:30</div><div class="stop-icon">&#128646;</div>
+<div class="stop-detail"><div class="stop-name">S-Bahn to Munich Airport</div><div class="stop-desc">Direct S-Bahn S1 from Hauptbahnhof to the airport — 40 min, simple and reliable. Allow plenty of time with the baby and stroller.</div><div class="stop-drive">Train &middot; S-Bahn S1, ~40 min to MUC</div></div>
+</div>
+<div class="stop">
+<div class="stop-time">17:00</div><div class="stop-icon">&#9992;&#65039;</div>
+<div class="stop-detail"><div class="stop-name">Evening flight Munich &rarr; Dublin</div><div class="stop-desc">Evening flight home. On the plane: photos of the Christmas markets, Nuremberg, and the gondola ride. Auf Wiedersehen, München! &#127883;</div></div>
+</div>
+</div>
+
+<!-- ====== INFO BOXES ====== -->
+
+<div class="info-box safety-ok">
+<h3>&#9989;&#65039; Why Munich (not Berlin or Rhine Valley)</h3>
+<ul>
+<li><strong>Safest city</strong>: Munich tops Germany's police safety stats for 7 consecutive years</li>
+<li><strong>LOW crime threat</strong>: US OSAC rates Munich LOW vs Berlin/Hamburg/Frankfurt MEDIUM</li>
+<li><strong>No protests on our dates</strong>: Nov 20 protests are over by Sat Nov 22. Our trip window is clear.</li>
+<li><strong>Baby infrastructure</strong>: Wide sidewalks, smooth paving, lifts at all major stations, baby-changing at airports and train stations</li>
+<li><strong>Bavaria = safest state</strong>: Lowest crime rates in Germany overall</li>
+</ul>
+</div>
+
+<div class="info-box">
+<h3>&#127869; Food &amp; Drink (100% Plant-Based)</h3>
+<ul>
+<li>&#127806; <strong>Gratitude</strong> (Maxvorstadt) — upscale vegan fine dining, changing menu, great vegan wine list. <em>Birthday dinner spot.</em></li>
+<li>&#127806; <strong>Max Pett</strong> (Sendlinger Tor) — Munich's classic vegan spot, extensive menu, schnitzel, bowls, desserts</li>
+<li>&#127806; <strong>Leibspeise</strong> (Türkenstrasse) — vegetarian with strong vegan daily specials, Bavarian tavern feel</li>
+<li>&#127806; <strong>Bodhi</strong> — traditional <em>Wirtshaus</em> atmosphere, fully plant-based, local favorite</li>
+<li>&#127806; <strong>Sattler</strong> (near Königsplatz) — creative plant-based cooking beyond salads and bowls</li>
+<li>&#127806; <strong>Ahimsa</strong> (Untergiesing) — vegan Asian: ramen, sushi, udon, coconut curry</li>
+<li>&#127793; <strong>Christmas market drinks</strong>: Hot chocolate (heißer Schokoladen), apple juice (Apfelsaft), chai tea — no alcohol needed</li>
+<li>&#127861; <strong>Christmas treats</strong>: <em>Lebkuchen</em> (gingerbread — many vegan versions), <em>Zuckerknödel</em> (sugar dumplings), <em>Maronen</em> (roasted chestnuts)</li>
+</ul>
+</div>
+
+<div class="info-box">
+<h3>&#128646; Transport</h3>
+<table class="pt-table">
+<thead><tr><th>Leg</th><th>Route</th><th>Mode</th><th>Time</th><th>Cost</th></tr></thead>
+<tbody>
+<tr><td class="pt-day">Flight</td><td>Dublin &rarr; Munich</td><td>Plane</td><td>~2h15</td><td>From €40 (Ryanair)</td></tr>
+<tr><td class="pt-day">MUC</td><td>Airport &rarr; city center</td><td>S-Bahn S1/S8</td><td>~40 min</td><td>€4.30</td></tr>
+<tr><td class="pt-day">Day 2</td><td>Munich &harr; Nuremberg</td><td>ICE Train</td><td>~1h18</td><td>From €16 each way</td></tr>
+<tr><td class="pt-day">Day 3</td><td>City &rarr; Airport</td><td>S-Bahn S1</td><td>~40 min</td><td>€4.30</td></tr>
+<tr><td class="pt-day">Flight</td><td>Munich &rarr; Dublin</td><td>Plane</td><td>~2h15</td><td>From €40</td></tr>
+</tbody>
+</table>
+<p class="pt-note">&#128241; Apps: <a href="https://www.bahn.de/" target="_blank">DB Navigator</a> for German trains, <a href="https://www.mvg.de/" target="_blank">MVG</a> for Munich S-Bahn/U-Bahn</p>
+<p class="pt-note">&#128135; Baby: All major stations have lifts, baby-changing rooms. Train family compartments available on long-distance services.</p>
+</div>
+
+<div class="info-box">
+<h3>&#128161; Tips</h3>
+<ul>
+<li><strong>Weather</strong>: November Munich is 2&ndash;8°C, likely rain. Pack waterproof layers, warm hats for baby and adults, waterproof stroller cover</li>
+<li><strong>Christmas markets close early</strong>: Most close by 20:00-21:00 in November — plan indoor activities for evenings</li>
+<li><strong>Book ahead</strong>: Gratitude (birthday dinner), Nymphenburg gondola, and ICE train to Nuremberg</li>
+<li><strong>Currency</strong>: Euros (€). Most places accept cards, but keep €50-100 cash for markets and small purchases</li>
+<li><strong>Passports</strong>: Carry them (Irish citizens need valid passport for Germany). Store baby's passport copy digitally</li>
+<li><strong>EU Health Insurance Card</strong>: Get one for the baby before traveling — free at any Irish pharmacy</li>
+<li><strong>Best photo light</strong>: December skies get dark by 16:00 — do outdoor sights before 15:00, Christmas markets after dark for the magic</li>
+<li><strong>Stroller storage</strong>: Trains have dedicated spaces, S-Bahn has luggage areas. Consider a lightweight umbrella stroller</li>
+</ul>
+</div>
+
+</div><!-- /container -->
+
+<div class="footer">Created with love by Prashanth</div>
+
+<!-- Lightbox -->
+<div id="lightbox" onclick="closeLightbox()">
+<span class="close" onclick="closeLightbox()">&times;</span>
+<button class="lb-nav lb-prev" onclick="event.stopPropagation();prevImage()">&#8249;</button>
+<button class="lb-nav lb-next" onclick="event.stopPropagation();nextImage()">&#8250;</button>
+<img id="lightbox-img" src="" alt="" onclick="event.stopPropagation()">
+<div class="lb-counter" id="lb-counter"></div>
+</div>
+
+<script>
+// Lightbox gallery
+var lbImages=[],lbIdx=0;
+document.querySelectorAll('.stop-imgs img').forEach(function(img){img.addEventListener('click',function(e){e.stopPropagation();var p=img.closest('.stop-imgs');lbImages=[];Array.from(p.querySelectorAll('img')).forEach(function(s){if(lbImages.indexOf(s.src)===-1)lbImages.push(s.src)});lbIdx=lbImages.indexOf(this.src);openLightbox(this.src)})});
+function openLightbox(src){document.getElementById('lightbox-img').src=src;document.getElementById('lightbox').classList.add('active');document.body.style.overflow='hidden';document.getElementById('lb-counter').textContent=(lbIdx+1)+' / '+lbImages.length}
+function closeLightbox(){document.getElementById('lightbox').classList.remove('active');document.body.style.overflow=''}
+function prevImage(){if(!lbImages.length)return;lbIdx=(lbIdx-1+lbImages.length)%lbImages.length;document.getElementById('lightbox-img').src=lbImages[lbIdx];document.getElementById('lb-counter').textContent=(lbIdx+1)+' / '+lbImages.length}
+function nextImage(){if(!lbImages.length)return;lbIdx=(lbIdx+1)%lbImages.length;document.getElementById('lightbox-img').src=lbImages[lbIdx];document.getElementById('lb-counter').textContent=(lbIdx+1)+' / '+lbImages.length}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLightbox();if(!document.getElementById('lightbox').classList.contains('active'))return;if(e.key==='ArrowLeft')prevImage();if(e.key==='ArrowRight')nextImage()});
+(function(){var lb=document.getElementById('lightbox'),sx=0;lb.addEventListener('touchstart',function(e){sx=e.changedTouches[0].screenX},{passive:true});lb.addEventListener('touchend',function(e){var dx=sx-e.changedTouches[0].screenX;if(Math.abs(dx)>50){if(dx>0)nextImage();else prevImage()}},{passive:true})})();
+// Hero slideshow
+let slideIdx=0,heroTimer;const hSlides=document.querySelectorAll('.hero-slide'),hDots=document.querySelectorAll('.hero-dot');
+function goToHero(n){hSlides.forEach(function(s){s.classList.remove('active')});hDots.forEach(function(d){d.classList.remove('active')});slideIdx=(n+hSlides.length)%hSlides.length;hSlides[slideIdx].classList.add('active');hDots[slideIdx].classList.add('active');clearInterval(heroTimer);if(hSlides.length>1)heroTimer=setInterval(function(){goToHero(slideIdx+1)},4500)}
+hDots.forEach(function(dot,i){dot.addEventListener('click',function(){goToHero(i)})});
+(function(){var h=document.querySelector('.hero'),sx=0;if(!h)return;h.addEventListener('touchstart',function(e){sx=e.changedTouches[0].screenX},{passive:true});h.addEventListener('touchend',function(e){var dx=sx-e.changedTouches[0].screenX;if(Math.abs(dx)>40){if(dx>0)goToHero(slideIdx+1);else goToHero(slideIdx-1)}},{passive:true})})();
+if(hSlides.length>1)heroTimer=setInterval(function(){goToHero(slideIdx+1)},4500);
+</script>
+
+</body>
+</html>
