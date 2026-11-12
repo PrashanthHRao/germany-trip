@@ -9,7 +9,6 @@
 body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f0f2f5;color:#1f2937;line-height:1.5}
 @font-face{font-family:'Inter';font-style:normal;font-weight:400 700;src:url(https://fonts.gstatic.com/s/inter/v18/UcC73FwrK3iLTeHuS_fjQt4P1RTh3qRfDkP1lnC.woff2) format('woff2');font-display:swap}
 
-/* Hero slideshow */
 html{scroll-behavior:smooth}
 .hero{position:relative;height:100vh;height:100dvh;min-height:500px;overflow:hidden;display:flex;align-items:center;justify-content:center;color:#fff;text-align:center}
 .hero-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.2s ease}
@@ -27,19 +26,20 @@ html{scroll-behavior:smooth}
 .hero-arrow:hover{background:rgba(255,255,255,.25)}
 @keyframes floatArrow{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(10px)}}
 
-/* Plan */
 .container{max-width:900px;margin:0 auto;padding:1.2rem;scroll-margin-top:3.5rem}
 .plan-title{font-size:.9rem;color:#6b7280;margin-bottom:.2rem;font-weight:500}
 .plan-sub{font-size:.78rem;color:#9ca3af;margin-bottom:1rem}
 
-/* Day cards */
 .day{background:#fff;border-radius:16px;margin-bottom:1.5rem;box-shadow:0 1px 3px rgba(0,0,0,.06),0 1px 2px rgba(0,0,0,.04);overflow:hidden;transition:box-shadow .2s}
 .day:hover{box-shadow:0 4px 12px rgba(0,0,0,.08),0 2px 4px rgba(0,0,0,.04)}
 .day-header{padding:1rem 1.2rem;font-weight:700;font-size:1.05rem;display:flex;align-items:center;gap:.6rem}
 .day1 .day-header{background:#ecfdf5;color:#065f46}
 .day2 .day-header{background:#fef3c7;color:#92400e}
 .day3 .day-header{background:#ede9fe;color:#5b21b6}
+.day4a .day-header{background:#eff6ff;color:#1e40af}
+.day4b .day-header{background:#fce7f3;color:#9d174d}
 .day-header span{font-size:1.2rem}
+
 .stop{display:flex;flex-flow:row wrap;padding:.85rem 1.2rem;border-top:1px solid #f3f4f6;gap:0;transition:background .15s;position:relative}
 .stop:hover{background:#fafafa}
 .stop:last-child{border-bottom:none}
@@ -51,23 +51,23 @@ html{scroll-behavior:smooth}
 .stop-drive{font-size:.72rem;color:#9ca3af;margin-top:2px;font-style:italic}
 .stop-acts{display:flex;flex-direction:column;gap:2px;min-width:0;background:#f0faf5;border:1px solid #bbf7d0;border-radius:8px;padding:6px 10px 8px;margin:6px 0 0}
 .acts-heading{font-size:.6rem;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:#16a34a;width:100%;margin-bottom:2px}
-.act-badge,.act-link{display:inline-flex;align-items:center;gap:3px;padding:1px 7px;border-radius:10px;font-size:.68rem;font-weight:500;white-space:nowrap;line-height:1.6;text-decoration:none}
-.stop-acts>.act-badge,.act-row{display:flex;align-items:center;gap:6px;width:100%;min-width:0;border-left:3px solid;padding:3px 8px;border-radius:0 4px 4px 0;margin:0}
+.act-row{display:flex;align-items:center;gap:6px;width:100%;min-width:0;border-left:3px solid;padding:3px 8px;border-radius:0 4px 4px 0;margin:0}
 .act-row>.act-badge{flex:1;border-left:none;padding:1px 4px}
+.act-badge{display:inline-flex;align-items:center;gap:3px;padding:1px 7px;border-radius:10px;font-size:.68rem;font-weight:500;white-space:nowrap;line-height:1.6}
 .act-book{display:inline-flex;align-items:center;font-size:.6rem;font-weight:600;text-transform:uppercase;letter-spacing:.5px;border:1px solid;border-radius:6px;padding:2px 10px;text-decoration:none;cursor:pointer;transition:all .15s;white-space:nowrap;line-height:1.5;color:inherit}
 a.act-book:hover{background:#1e40af;color:#fff;border-color:#1e40af}
 .act-couple{background:#eff6ff;color:#1e40af}
 .act-baby{background:#fef3c7;color:#b45309}
 .must-see{display:inline-block;background:#fef3c7;color:#92400e;font-size:.65rem;font-weight:600;padding:.1rem .4rem;border-radius:20px;margin-left:.4rem;vertical-align:middle;letter-spacing:.02em;line-height:1.4}
 .cafe-tag{display:inline-block;background:#fef3c7;color:#92400e;font-size:.7rem;padding:.12rem .45rem;border-radius:20px;margin-left:.3rem;font-weight:500}
-.birthday-tag{display:inline-block;background:#fce7f3;color:#be185d;font-size:.7rem;padding:.12rem .45rem;border-radius:20px;margin-left:.3rem;font-weight:500}
 .safety-tag{display:inline-block;background:#fee2e2;color:#b91c1c;font-size:.68rem;padding:.12rem .45rem;border-radius:20px;margin-left:.3rem;font-weight:600}
+.option-tag{display:inline-block;background:#e0f2fe;color:#0369a1;font-size:.7rem;padding:.15rem .6rem;border-radius:20px;font-weight:600;margin-left:.3rem}
+
 .stop-imgs{display:flex;gap:8px;min-width:0;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;touch-action:pan-x;overscroll-behavior-x:contain;margin-top:8px;padding-bottom:4px;cursor:default}
 .stop-imgs img{flex:0 0 auto;width:200px;height:140px;object-fit:cover;border-radius:10px;cursor:zoom-in;scroll-snap-align:start;transition:transform .3s ease,box-shadow .3s ease}
 .stop-imgs img:hover{transform:scale(1.02);box-shadow:0 4px 20px rgba(0,0,0,.12)}
 @media(max-width:600px){.stop-imgs img{width:160px;height:120px}}
 
-/* Lightbox */
 #lightbox{display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.85);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);justify-content:center;align-items:center;padding:2rem;animation:fadeIn .25s ease;touch-action:none}
 #lightbox.active{display:flex}
 #lightbox img{max-width:100%;max-height:85vh;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,.5);object-fit:contain;pointer-events:auto}
@@ -80,7 +80,6 @@ a.act-book:hover{background:#1e40af;color:#fff;border-color:#1e40af}
 .lb-counter{position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);color:#fff;font-size:.82rem;background:rgba(0,0,0,.4);padding:.3rem .9rem;border-radius:20px;pointer-events:none;z-index:2}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 
-/* Info boxes */
 .info-box{background:#fff;border-radius:16px;padding:1.2rem;box-shadow:0 1px 3px rgba(0,0,0,.06),0 1px 2px rgba(0,0,0,.04);margin-bottom:1.2rem}
 .info-box h3{font-size:.95rem;font-weight:700;margin-bottom:.6rem;color:#111827;display:flex;align-items:center;gap:.4rem}
 .info-box ul{list-style:none;font-size:.84rem;color:#4b5563}
@@ -95,14 +94,12 @@ a.act-book:hover{background:#1e40af;color:#fff;border-color:#1e40af}
 .safety-ok h3{color:#16a34a}
 .safety-ok li::before{content:"\2022";color:#16a34a}
 
-/* Map */
 .map-section{background:#fff;border-radius:16px;box-shadow:0 1px 3px rgba(0,0,0,.06),0 1px 2px rgba(0,0,0,.04);overflow:hidden;margin-bottom:1.5rem}
 .map-section .map-h{padding:1rem 1.2rem;font-size:.95rem;font-weight:600}
 .map-section iframe{width:100%;height:380px;border:none;display:block}
 .map-link{display:block;text-align:center;padding:.8rem;background:#1a73e8;color:#fff;text-decoration:none;font-weight:600;font-size:.88rem;transition:background .2s}
 .map-link:hover{background:#1557b0}
 
-/* Transport table */
 .pt-table{width:100%;border-collapse:collapse;font-size:.78rem;color:#4b5563;margin-top:.4rem}
 .pt-table th{font-size:.62rem;text-transform:uppercase;letter-spacing:.5px;color:#9ca3af;text-align:left;padding:.35rem .5rem;border-bottom:2px solid #e5e7eb}
 .pt-table td{padding:.4rem .5rem;border-bottom:1px solid #f3f4f6;vertical-align:top}
@@ -117,7 +114,6 @@ a.act-book:hover{background:#1e40af;color:#fff;border-color:#1e40af}
 .pt-note+.pt-note{margin-top:.35rem}
 @media(max-width:600px){.pt-table{font-size:.72rem}.pt-table td,.pt-table th{padding:.3rem .4rem}}
 
-/* Hotel cards */
 .hotel-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:.8rem;margin-top:.5rem}
 .hotel-card{border:1px solid #e5e7eb;border-radius:12px;padding:1rem;transition:box-shadow .2s}
 .hotel-card:hover{box-shadow:0 2px 8px rgba(0,0,0,.08)}
@@ -148,15 +144,15 @@ a.act-book:hover{background:#1e40af;color:#fff;border-color:#1e40af}
 
 <!-- ===== HERO SLIDESHOW ===== -->
 <div class="hero">
-<div class="hero-slide active" style="background-image:url(https://images.pexels.com/photos/29705584/pexels-photo-29705584.jpeg?auto=compress&cs=tinysrgb&w=1600)"><span style="position:absolute;bottom:7rem;right:1rem;z-index:3;background:rgba(0,0,0,.5);color:#fff;font-size:.72rem;padding:.25rem .55rem;border-radius:20px">&#128205; Munich Christmas Lights</span></div>
-<div class="hero-slide" style="background-image:url(https://images.pexels.com/photos/36092695/pexels-photo-36092695.jpeg?auto=compress&cs=tinysrgb&w=1600)"><span style="position:absolute;bottom:7rem;right:1rem;z-index:3;background:rgba(0,0,0,.5);color:#fff;font-size:.72rem;padding:.25rem .55rem;border-radius:20px">&#128205; Neuschwanstein Castle in Snow</span></div>
+<div class="hero-slide active" style="background-image:url(https://images.pexels.com/photos/37602533/pexels-photo-37602533.jpeg?auto=compress&cs=tinysrgb&w=1600)"><span style="position:absolute;bottom:7rem;right:1rem;z-index:3;background:rgba(0,0,0,.5);color:#fff;font-size:.72rem;padding:.25rem .55rem;border-radius:20px">&#128205; Marienplatz &amp; Frauenkirche</span></div>
+<div class="hero-slide" style="background-image:url(https://images.pexels.com/photos/36092695/pexels-photo-36092695.jpeg?auto=compress&cs=tinysrgb&w=1600)"><span style="position:absolute;bottom:7rem;right:1rem;z-index:3;background:rgba(0,0,0,.5);color:#fff;font-size:.72rem;padding:.25rem .55rem;border-radius:20px">&#128205; Neuschwanstein Castle</span></div>
 <div class="hero-slide" style="background-image:url(https://images.pexels.com/photos/29272542/pexels-photo-29272542.jpeg?auto=compress&cs=tinysrgb&w=1600)"><span style="position:absolute;bottom:7rem;right:1rem;z-index:3;background:rgba(0,0,0,.5);color:#fff;font-size:.72rem;padding:.25rem .55rem;border-radius:20px">&#128205; Kuhflucht Waterfalls</span></div>
 <div class="hero-slide" style="background-image:url(https://images.pexels.com/photos/37277639/pexels-photo-37277639.jpeg?auto=compress&cs=tinysrgb&w=1600)"><span style="position:absolute;bottom:7rem;right:1rem;z-index:3;background:rgba(0,0,0,.5);color:#fff;font-size:.72rem;padding:.25rem .55rem;border-radius:20px">&#128205; Nymphenburg Palace</span></div>
 <div class="hero-slide" style="background-image:url(https://images.pexels.com/photos/38658435/pexels-photo-38658435.jpeg?auto=compress&cs=tinysrgb&w=1600)"><span style="position:absolute;bottom:7rem;right:1rem;z-index:3;background:rgba(0,0,0,.5);color:#fff;font-size:.72rem;padding:.25rem .55rem;border-radius:20px">&#128205; Hohenschwangau &amp; Alps</span></div>
 <div class="hero-content">
 <h1>Bavaria Spectacles</h1>
 <p class="sub">Dublin &rarr; Munich &rarr; Neuschwanstein &rarr; Waterfalls &rarr; Dublin</p>
-<p class="meta">Sat 22 &ndash; Tue 25 Nov 2026 &bull; 3 travellers (wife's birthday &#10084;) &bull; baby-friendly &bull; vegan/vegetarian</p>
+<p class="meta">Thu/Fri 19/20 &ndash; Sun 22 Nov 2026 &bull; 3 travellers (with baby) &bull; stroller-safe &bull; 100% plant-based</p>
 </div>
 <div class="hero-dots">
 <span class="hero-dot active"></span><span class="hero-dot"></span><span class="hero-dot"></span><span class="hero-dot"></span><span class="hero-dot"></span>
@@ -167,34 +163,36 @@ a.act-book:hover{background:#1e40af;color:#fff;border-color:#1e40af}
 <!-- ===== ITINERARY ===== -->
 <div class="container">
 
-<p class="plan-title">Bavaria, Germany &bull; Sat 22 &ndash; Tue 25 Nov 2026</p>
-<p class="plan-sub">Dublin &rarr; Munich (base) &rarr; Neuschwanstein day trip &rarr; Kuhflucht Waterfalls &rarr; GOP Musical &rarr; Dublin &bull; Nature, spectacles, theatre &bull; stroller-safe &bull; 100% plant-based</p>
+<p class="plan-title">Bavaria, Germany &bull; Thu/Fri 19/20 &ndash; Sun 22 Nov 2026</p>
+<p class="plan-sub">Dublin &rarr; Munich (base) &rarr; Neuschwanstein day trip &rarr; Waterfalls, English Garden, Nymphenburg &rarr; Dublin &bull; Sandyford by 9am Mon = Sun night return only</p>
 
 <!-- ====== SAFETY NOTICE ====== -->
 <div class="info-box safety-box">
 <h3>&#9888;&#65039; Safety Briefing</h3>
 <ul>
-<li><strong>Munich</strong> is Germany's safest major city (top of police stats 7 years running) and rated LOW-threat by US OSAC. The right choice for a family with a baby.</li>
-<li><strong>Avoid Berlin</strong> &mdash; multiple protests on Nov 14, 20, 25 including youth "Gen Z regelt" demos with reported violence. MEDIUM-threat location.</li>
-<li><strong>Nov 20 (Thursday)</strong>: "Gen Z regelt" protests in Munich city center. <strong>Day 1 is Sat Nov 22</strong> &mdash; well clear of protest dates.</li>
-<li><strong>Germany national terror level</strong> = "high" (upgraded July 2026) &mdash; standard national posture. Enhanced security at Christmas markets with visible police. No specific threats to Munich.</li>
-<li><strong>Petty crime</strong>: Watch for pickpockets at Hauptbahnhof. Keep passports/baby documents in hotel safe.</li>
+<li><strong>Munich is safe</strong> &mdash; Germany's safest major city (top of police stats 7 years running), rated LOW-threat by US OSAC</li>
+<li><strong>Nov 20 (Day 1) &mdash; Gen Z regelt protest in Munich</strong>. A youth protest is planned in the city center on our arrival day. The protest is afternoon/evening. <strong>Impact:</strong> S-Bahn from the airport should be unaffected. We're arriving mid-morning or mid-afternoon and heading straight to sights outside the protest zone. The protest will be over by the time we're back in the evening. Avoid Marienplatz between 14:00&ndash;18:00.</li>
+<li><strong>Berlin &mdash; avoid</strong>: Multiple protests Nov 14, 20, 25 with reported violence</li>
+<li><strong>Germany national terror level</strong> = "high" (standard national posture). Enhanced security at Christmas markets with visible police. No specific threats to Munich.</li>
 <li><strong>Stroller-friendly</strong>: Munich has wide sidewalks, smooth paving, lifts at stations. Most attractions are accessible.</li>
 </ul>
 </div>
 
+<!-- ================================================================ -->
+<!-- DAY 1 — FRI 20 NOV → Arrival + City Sights -->
+<!-- ================================================================ -->
 <div class="day day1">
-<div class="day-header"><span>&#9992;&#65039;</span> Day 1 &mdash; Sat 22 Nov &middot; Arrival, Marienplatz, Viktualienmarkt &amp; BMW Welt</div>
+<div class="day-header"><span>&#9992;&#65039;</span> Day 1 &mdash; Fri 20 Nov &middot; Arrival, BMW Welt, Marienplatz &amp; Viktualienmarkt</div>
 
 <div class="map-section">
-<div class="map-h">&#128205; Dublin &rarr; Munich Airport &rarr; Marienplatz &rarr; BMW Welt</div>
-<iframe loading="lazy" src="https://maps.google.com/maps?saddr=Dublin+Airport&daddr=Munich+Airport+to:Marienplatz+Munich+to:BMW+Welt+Munich&output=embed" allowfullscreen></iframe>
-<a class="map-link" href="https://www.google.com/maps/dir/Dublin+Airport/Munich+Airport/Marienplatz+Munich/BMW+Welt+Munich" target="_blank">Open route in Google Maps</a>
+<div class="map-h">&#128205; Dublin &rarr; Munich Airport &rarr; City Center</div>
+<iframe loading="lazy" src="https://maps.google.com/maps?saddr=Dublin+Airport&daddr=Munich+Airport+to:BMW+Welt+Munich+to:Marienplatz+Munich&output=embed" allowfullscreen></iframe>
+<a class="map-link" href="https://www.google.com/maps/dir/Dublin+Airport/Munich+Airport/BMW+Welt+Munich/Marienplatz+Munich" target="_blank">Open route in Google Maps</a>
 </div>
 
 <div class="stop">
-<div class="stop-time">10:50</div><div class="stop-icon">&#9992;&#65039;</div>
-<div class="stop-detail"><div class="stop-name">Depart Dublin (DUB) &mdash; Flight <strong>VL 2517</strong></div><div class="stop-desc"><strong>Air VIA VL 2517</strong> departs 10:50, arrives 14:05 (2h15). Not too early with baby, full afternoon ahead. Pack layers (Nov in Munich is 2&ndash;8&deg;C), baby carrier, stroller, passport and EU Health Insurance Card for baby.</div></div>
+<div class="stop-time">Fri 10:50</div><div class="stop-icon">&#9992;&#65039;</div>
+<div class="stop-detail"><div class="stop-name">Depart Dublin (DUB) &mdash; Flight <strong>VL 2517</strong></div><div class="stop-desc"><strong>Air VIA VL 2517</strong> departs 10:50, arrives 14:05 (2h15). Mid-morning departure = not too early with baby. Alternative: <strong>EI 352</strong> (Aer Lingus) 06:40&ndash;10:10 Fri morning for a full Day 1. Or <strong>EI 352</strong> Thu 19th 06:40&ndash;10:10 (arrive Munich evening Thu, full extra day!) Pack layers (Nov in Munich is 2&ndash;8&deg;C), baby carrier, stroller, passport and EU Health Insurance Card for baby.</div><div class="stop-drive">Flight &middot; Air VIA VL 2517, 2h15</div></div>
 </div>
 <div class="stop">
 <div class="stop-time">14:05</div><div class="stop-icon">&#128739;</div>
@@ -202,66 +200,58 @@ a.act-book:hover{background:#1e40af;color:#fff;border-color:#1e40af}
 </div>
 <div class="stop">
 <div class="stop-time">15:00</div><div class="stop-icon">&#127968;</div>
-<div class="stop-detail"><div class="stop-name">Check in &amp; drop bags</div><div class="stop-desc">See hotel options below. All recommended hotels have elevators and are near Hauptbahnhof or Marienplatz for easy stroller access.</div></div>
+<div class="stop-detail"><div class="stop-name">Check in &amp; drop bags</div><div class="stop-desc">See hotel options below. All recommended hotels have elevators and are near Hauptbahnhof for easy access from the airport.</div></div>
 </div>
 <div class="stop">
-<div class="stop-time">16:00</div><div class="stop-icon">&#127860;</div>
+<div class="stop-time">16:00</div><div class="stop-icon">&#128647;</div>
+<div class="stop-detail"><div class="stop-name">BMW Welt (Free!) <span class="must-see">&#9733; Must-See</span></div><div class="stop-desc">BMW's stunning futuristic showroom &mdash; a glass-and-steel double-cone architectural masterpiece. Free entry, no booking needed. Walk through the brand experience zones, sit in current BMW models, see the vehicle handover stage. The architecture alone is worth it. Open until 20:00 on Fridays. <strong>Source: <a href="https://www.bmw-welt.com" target="_blank">bmw-welt.com</a></strong></div>
+<div class="stop-imgs"><img src="https://images.pexels.com/photos/25675407/pexels-photo-25675407.jpeg?auto=compress&cs=tinysrgb&w=800" alt="BMW headquarters Munich modern glass architecture" loading="lazy"></div>
+<div class="stop-drive">Tram &middot; 15 min from Hbf (U6 to Olympiapark)</div></div>
+</div>
+<div class="stop">
+<div class="stop-time">17:00</div><div class="stop-icon">&#127860;</div>
 <div class="stop-detail"><div class="stop-name">Lunch: Max Pett</div><div class="stop-desc">Munich's iconic vegan restaurant near Sendlinger Tor &mdash; soups, bowls, schnitzel, desserts. Everything plant-based, relaxed atmosphere.</div><div class="stop-drive">Walk &middot; 10 min from Marienplatz</div></div>
 </div>
 <div class="stop">
-<div class="stop-time">17:00</div><div class="stop-icon">&#127756;</div>
-<div class="stop-detail"><div class="stop-name">Marienplatz &amp; Glockenspiel <span class="must-see">&#9733; Must-See</span></div><div class="stop-desc">Munich's heart &mdash; the Gothic New Town Hall with its famous Glockenspiel (shows at 11:00, 12:00, 17:00 in Nov). The Christmas market stalls are up from Nov 20. Smooth paving, stroller-friendly. See the 3,000-LED Christmas tree from Sauerlach glowing at dusk.</div>
+<div class="stop-time">18:30</div><div class="stop-icon">&#127756;</div>
+<div class="stop-detail"><div class="stop-name">Marienplatz &amp; Glockenspiel <span class="must-see">&#9733; Must-See</span></div><div class="stop-desc">Munich's heart &mdash; the Gothic New Town Hall with its famous Glockenspiel. The Christmas market stalls are up from Nov 20. Smooth paving, stroller-friendly. See the 3,000-LED Christmas tree from Sauerlach glowing at dusk. <strong>Source: <a href="https://www.muenchen.de/en/sights/one-day-munich-what-you-should-visit" target="_blank">muenchen.de</a></strong></div>
 <div class="stop-imgs">
 <img src="https://images.pexels.com/photos/37602533/pexels-photo-37602533.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Aerial view of Marienplatz and Frauenkirche" loading="lazy">
 <img src="https://images.pexels.com/photos/11030391/pexels-photo-11030391.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Rathaus-Glockenspiel Munich" loading="lazy">
 <img src="https://images.pexels.com/photos/30944546/pexels-photo-30944546.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Aerial view of Marienplatz New Town Hall" loading="lazy">
-</div>
-<div class="stop-acts"><div class="acts-heading">&#127919; Activities</div><div class="act-row"><span class="act-badge act-couple">&#128100; Watch the Glockenspiel show at 17:00</span></div></div></div>
+</div></div>
 </div>
 <div class="stop">
-<div class="stop-time">17:30</div><div class="stop-icon">&#127860;</div>
-<div class="stop-detail"><div class="stop-name">Viktualienmarkt</div><div class="stop-desc">Munich's famous daily food market since 1802 &mdash; 140+ stalls with produce, cheese, flowers, and street food. Try vegan crepes (Pfannkuchen) at the market stalls. In November, the Christmas market section opens here too. <strong>Source: <a href="https://www.muenchen.de/en/sights/attractions/english-garden" target="_blank">muenchen.de</a></strong></div>
+<div class="stop-time">19:00</div><div class="stop-icon">&#127860;</div>
+<div class="stop-detail"><div class="stop-name">Viktualienmarkt <span class="cafe-tag">Vegan</span></div><div class="stop-desc">Munich's famous daily food market since 1802 &mdash; 140+ stalls with produce, cheese, flowers, and street food. Try vegan crepes (Pfannkuchen) at the market stalls. <strong>Source: <a href="https://www.muenchen.de/en/sights/sightseeing-25-top-sights-and-attractions-munich" target="_blank">muenchen.de</a></strong></div>
 <div class="stop-imgs"><img src="https://images.pexels.com/photos/30309031/pexels-photo-30309031.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Vibrant outdoor market scene Munich Viktualienmarkt" loading="lazy"></div>
 <div class="stop-drive">Walk &middot; 3 min from Marienplatz</div></div>
 </div>
 <div class="stop">
-<div class="stop-time">18:30</div><div class="stop-icon">&#127963;</div>
-<div class="stop-detail"><div class="stop-name">Frauenkirche &amp; Mary's Column</div><div class="stop-desc">Munich's iconic twin-towered cathedral &mdash; the symbol of the city. Free to enter. Right beside Marienplatz. The golden Mary's Column in the square is perfect for a photo stop. <strong>Source: <a href="https://www.muenchen.de/en/sights/one-day-munich-what-you-should-visit" target="_blank">muenchen.de</a></strong></div>
-<div class="stop-imgs"><img src="https://images.pexels.com/photos/34896475/pexels-photo-34896475.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Golden Mary Column and Frauenkirche towers" loading="lazy"></div></div>
-</div>
-<div class="stop">
-<div class="stop-time">19:00</div><div class="stop-icon">&#128647;</div>
-<div class="stop-detail"><div class="stop-name">BMW Welt (Free!) <span class="must-see">&#9733; Spectacle</span></div><div class="stop-desc">BMW's stunning futuristic showroom &mdash; a glass-and-steel double-cone architectural masterpiece. Free entry, no booking needed. Walk through the brand experience zones, sit in current BMW models, see the vehicle handover stage. The architecture alone is worth it. Open until 20:00 on Saturdays. <strong>Source: <a href="https://www.bmw-welt.com" target="_blank">bmw-welt.com</a></strong></div>
-<div class="stop-imgs"><img src="https://images.pexels.com/photos/25675407/pexels-photo-25675407.jpeg?auto=compress&cs=tinysrgb&w=800" alt="BMW headquarters Munich modern glass architecture" loading="lazy"></div>
-<div class="stop-drive">Tram &middot; 15 min from Marienplatz (U6 to Olympiapark)</div></div>
-</div>
-<div class="stop">
 <div class="stop-time">20:00</div><div class="stop-icon">&#127860;</div>
-<div class="stop-detail"><div class="stop-name">Dinner: Gratitude <span class="birthday-tag">&#10084; Birthday</span> <span class="cafe-tag">Vegan</span></div><div class="stop-desc"><strong>Wife's birthday dinner!</strong> Munich's top vegan fine-dining &mdash; artful plating, changing menu (chickpea curry, tempeh ravioli, grilled avocado), excellent vegan wine list. Intimate, romantic setting in Maxvorstadt.</div><div class="stop-drive">Walk &middot; 15 min from Marienplatz</div>
-<div class="stop-acts"><div class="acts-heading">&#127919; Activities</div><div class="act-row"><span class="act-badge act-couple">&#128100; Romantic birthday dinner</span><a class="act-book" style="background:#fce7f3;color:#be185d;border-color:#fce7f3" href="https://www.resy.com/cities/munich/gratitude-vegan-restaurant" target="_blank">Book on Resy</a></div></div></div>
-</div>
-<div class="stop">
-<div class="stop-time">21:30</div><div class="stop-icon">&#127820;</div>
-<div class="stop-detail"><div class="stop-name">Evening Christmas Market Glow</div><div class="stop-desc">Return to Marienplatz after dark &mdash; the Christmas market lights and the illuminated Old Town Hall are magical. A short stroll back to the hotel with the baby asleep in the carrier.</div></div>
+<div class="stop-detail"><div class="stop-name">Dinner: Leibspeise</div><div class="stop-desc">Established vegetarian restaurant on T&uuml;rkenstrasse &mdash; daily-changing seasonal menu, strong vegan options, classic Bavarian tavern atmosphere without the meat.</div><div class="stop-drive">Walk &middot; 15 min from Hbf</div></div>
 </div>
 </div>
 
+<!-- ================================================================ -->
+<!-- DAY 2 — SAT 21 NOV → Neuschwanstein Castle Day Trip -->
+<!-- ================================================================ -->
 <div class="day day2">
-<div class="day-header"><span>&#128205;</span> Day 2 &mdash; Sun 23 Nov &middot; Neuschwanstein Castle Day Trip</div>
+<div class="day-header"><span>&#128205;</span> Day 2 &mdash; Sat 21 Nov &middot; Neuschwanstein Castle Day Trip <span class="must-see">&#9733; Must-See</span></div>
 
 <div class="map-section">
-<div class="map-h">&#128205; Munich &rarr; F&uuml;ssen &rarr; Neuschwanstein Castle &rarr; Munich</div>
+<div class="map-h">&#128205; Munich &rarr; F&uuml;ssen &rarr; Neuschwanstein &rarr; Marienbr&uuml;cke &rarr; Munich</div>
 <iframe loading="lazy" src="https://maps.google.com/maps?saddr=Munich+Hauptbahnhof&daddr=Fussen+train+station+to:Neuschwanstein+Castle+to:Marienbr%C3%BCcke+Neuschwanstein+to:Munich&output=embed" allowfullscreen></iframe>
 <a class="map-link" href="https://www.google.com/maps/dir/Munich+Hauptbahnhof/Fussen/Neuschwanstein+Castle/Marienbr%C3%BCcke/Munich" target="_blank">Open route in Google Maps</a>
 </div>
 
 <div class="stop">
 <div class="stop-time">07:00</div><div class="stop-icon">&#128646;</div>
-<div class="stop-detail"><div class="stop-name">Train to F&uuml;ssen</div><div class="stop-desc">Early departure &mdash; direct RE or RB from M&uuml;nchen Hbf to F&uuml;ssen (~2h18, change at Buchloe). Buy a <strong>Bayern-Ticket</strong> (&euro;34 for up to 5 people on regional trains) via the <a href="https://www.bahn.de" target="_blank">DB Navigator</a> app. Family compartments available. Baby can sleep on the smooth regional train.</div><div class="stop-drive">Train &middot; RE/RB to F&uuml;ssen, ~2h18 (Bayern-Ticket &euro;34/family)</div></div>
+<div class="stop-detail"><div class="stop-name">Train to F&uuml;ssen</div><div class="stop-desc">Early departure &mdash; direct RE or RB from M&uuml;nchen Hbf to F&uuml;ssen (~2h18, change at Buchloe). Buy a <strong>Bayern-Ticket</strong> (&euro;34 for up to 5 people on regional trains) via the <a href="https://www.bahn.de" target="_blank">DB Navigator</a> app. Baby can sleep on the smooth regional train.</div><div class="stop-drive">Train &middot; RE/RB to F&uuml;ssen, ~2h18 (Bayern-Ticket &euro;34/family)</div></div>
 </div>
 <div class="stop">
 <div class="stop-time">09:30</div><div class="stop-icon">&#127756;</div>
-<div class="stop-detail"><div class="stop-name">Hohenschwangau Village &amp; Alpsee</div><div class="stop-desc">Charming Bavarian village at the foot of the Alps, on the shores of Lake Alpsee. The Ticket Center for Neuschwanstein is here &mdash; buy your castle tour ticket online in advance to queue at the top! The village has caf&eacute;s with vegan options and baby facilities. <strong>Source: <a href="https://www.neuschwanstein.de" target="_blank">neuschwanstein.de</a></strong></div>
+<div class="stop-detail"><div class="stop-name">Hohenschwangau Village &amp; Alpsee</div><div class="stop-desc">Charming Bavarian village at the foot of the Alps, on the shores of Lake Alpsee. The Ticket Center for Neuschwanstein is here &mdash; buy your castle tour ticket online in advance to queue at the top! The village has caf&eacute;s and baby facilities. <strong>Source: <a href="https://www.neuschwanstein.de" target="_blank">neuschwanstein.de</a></strong></div>
 <div class="stop-imgs">
 <img src="https://images.pexels.com/photos/28733357/pexels-photo-28733357.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Scenic Bavarian village Schwangau autumn Alps" loading="lazy">
 <img src="https://images.pexels.com/photos/38658435/pexels-photo-38658435.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Alpine landscape near Fussen Hohenschwangau Castle" loading="lazy">
@@ -270,11 +260,11 @@ a.act-book:hover{background:#1e40af;color:#fff;border-color:#1e40af}
 </div>
 <div class="stop">
 <div class="stop-time">10:15</div><div class="stop-icon">&#128663;</div>
-<div class="stop-detail"><div class="stop-name">Shuttle Bus to Castle</div><div class="stop-desc">Numbered shuttle bus (or horse-drawn carriage in season) from the village up to the castle entrance. ~10 min ride with spectacular views. Numbered system means you board the bus matching your tour time slot. Bring baby carrier for the final walk.</div><div class="stop-drive">Bus &middot; Shuttle bus ~10 min uphill to castle</div></div>
+<div class="stop-detail"><div class="stop-name">Shuttle Bus to Castle</div><div class="stop-desc">Numbered shuttle bus from the village up to the castle entrance. ~10 min ride with spectacular views. Bring baby carrier for the final walk.</div><div class="stop-drive">Bus &middot; Shuttle bus ~10 min uphill to castle</div></div>
 </div>
 <div class="stop">
 <div class="stop-time">10:45</div><div class="stop-icon">&#127963;</div>
-<div class="stop-detail"><div class="stop-name">Neuschwanstein Castle Tour <span class="must-see">&#9733; Spectacle</span></div><div class="stop-desc"><strong>THE fairytale castle!</strong> King Ludwig II's romantic mountain palace &mdash; the inspiration for Disney's Sleeping Beauty Castle. The 30-minute guided tour takes you through the throne room, singing hall, and King's bedroom with stunning Alpine views through every window. In November, the surrounding peaks may be dusted with snow &mdash; truly magical. &euro;21 + &euro;2.50 booking fee (free under 18). Book <strong>online weeks ahead</strong> &mdash; same-day tickets sell out by 9 AM! <strong>Source: <a href="https://www.neuschwanstein.de" target="_blank">neuschwanstein.de</a> + <a href="https://www.muenchen.de/en/sights/excursions/neuschwanstein" target="_blank">muenchen.de</a></strong></div>
+<div class="stop-detail"><div class="stop-name">Neuschwanstein Castle Tour <span class="must-see">&#9733; Must-See</span></div><div class="stop-desc"><strong>THE fairytale castle!</strong> King Ludwig II's romantic mountain palace &mdash; the inspiration for Disney's Sleeping Beauty Castle. The 30-minute guided tour takes you through the throne room, singing hall, and King's bedroom with stunning Alpine views through every window. In November, the surrounding peaks may be dusted with snow &mdash; truly magical. &euro;21 + &euro;2.50 booking fee (free under 18). <strong>Book online weeks ahead</strong> &mdash; same-day tickets sell out by 9 AM! <strong>Source: <a href="https://www.neuschwanstein.de" target="_blank">neuschwanstein.de</a></strong></div>
 <div class="stop-imgs">
 <img src="https://images.pexels.com/photos/4963634/pexels-photo-4963634.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Neuschwanstein Castle fairy tale" loading="lazy">
 <img src="https://images.pexels.com/photos/36092695/pexels-photo-36092695.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Neuschwanstein Castle snowy Bavarian forest winter" loading="lazy">
@@ -284,15 +274,15 @@ a.act-book:hover{background:#1e40af;color:#fff;border-color:#1e40af}
 </div>
 <div class="stop">
 <div class="stop-time">11:30</div><div class="stop-icon">&#127748;</div>
-<div class="stop-detail"><div class="stop-name">Marienbr&uuml;cke (Mary's Bridge) <span class="must-see">&#9733; Spectacle</span></div><div class="stop-desc">The most iconic viewpoint in Bavaria! A footbridge 12m above the Pöllat Gorge with the most photographed view of Neuschwanstein Castle. A 15-minute walk uphill from the castle (steep, use carrier for baby). The view of the castle against the Alpine backdrop is the postcard image of Germany. <strong>Source: <a href="https://www.muenchen.de" target="_blank">muenchen.de</a></strong></div>
+<div class="stop-detail"><div class="stop-name">Marienbr&uuml;cke (Mary's Bridge) <span class="must-see">&#9733; Must-See</span></div><div class="stop-desc">The most iconic viewpoint in Bavaria! A footbridge 12m above the P&ouml;llat Gorge with the most photographed view of Neuschwanstein Castle. A 15-minute walk uphill from the castle (steep, use carrier for baby). The view of the castle against the Alpine backdrop is the postcard image of Germany.</div>
 <div class="stop-imgs">
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Schloss_Neuschwanstein_from_Marienbruecke.JPG/1280px-Schloss_Neuschwanstein_from_Marienbruecke.JPG" alt="Neuschwanstein from Marienbrücke bridge" loading="lazy">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Schloss_Neuschwanstein_from_Marienbruecke.JPG/1280px-Schloss_Neuschwanstein_from_Marienbruecke.JPG" alt="Neuschwanstein from Marienbr&uuml;cke bridge" loading="lazy">
 </div>
 <div class="stop-drive">Walk &middot; 15 min uphill from castle (steep, baby carrier)</div></div>
 </div>
 <div class="stop">
 <div class="stop-time">12:30</div><div class="stop-icon">&#127860;</div>
-<div class="stop-detail"><div class="stop-name">Lunch in Hohenschwangau</div><div class="stop-desc">Back in the village for lunch. Look for vegan/vegetarian options at the local caf&eacute;s. There are several bakeries with vegetarian sandwiches and salads. The <strong>Alpsee lake</strong> nearby has a flat walking path perfect for a stroller push after lunch.</div></div>
+<div class="stop-detail"><div class="stop-name">Lunch in Hohenschwangau</div><div class="stop-desc">Back in the village for lunch. Look for vegetarian options at the local caf&eacute;s. The <strong>Alpsee lake</strong> nearby has a flat walking path perfect for a stroller push after lunch.</div></div>
 </div>
 <div class="stop">
 <div class="stop-time">13:30</div><div class="stop-icon">&#127756;</div>
@@ -300,30 +290,33 @@ a.act-book:hover{background:#1e40af;color:#fff;border-color:#1e40af}
 </div>
 <div class="stop">
 <div class="stop-time">14:30</div><div class="stop-icon">&#128646;</div>
-<div class="stop-detail"><div class="stop-name">Train back to Munich</div><div class="stop-desc">Afternoon RE/RB from F&uuml;ssen back to M&uuml;nchen Hbf (~2h18). Baby can nap on the train. Last trains to Munich are around 20:00, so there's plenty of flexibility with timing.</div><div class="stop-drive">Train &middot; RE/RB, ~2h18 back to Munich</div></div>
+<div class="stop-detail"><div class="stop-name">Train back to Munich</div><div class="stop-desc">Afternoon RE/RB from F&uuml;ssen back to M&uuml;nchen Hbf (~2h18). Baby can nap on the train.</div><div class="stop-drive">Train &middot; RE/RB, ~2h18 back to Munich</div></div>
 </div>
 <div class="stop">
 <div class="stop-time">17:00</div><div class="stop-icon">&#127860;</div>
-<div class="stop-detail"><div class="stop-name">Dinner: Leibspeise</div><div class="stop-desc">Established vegetarian restaurant on T&uuml;rkenstrasse &mdash; daily-changing seasonal menu, strong vegan options, classic Bavarian tavern atmosphere without the meat. Cozy second dinner in Munich.</div><div class="stop-drive">Walk &middot; 15 min from Hauptbahnhof</div></div>
+<div class="stop-detail"><div class="stop-name">Dinner: Bodhi</div><div class="stop-desc">One of Munich's best vegan spots &mdash; classic Bavarian tavern atmosphere (<em>Wirtshausatmosph&uuml;re</em>) with a fully plant-based menu.</div></div>
 </div>
 </div>
 
+<!-- ================================================================ -->
+<!-- DAY 3 — SUN 22 NOV → Waterfalls, English Garden, Nymphenburg -->
+<!-- ================================================================ -->
 <div class="day day3">
-<div class="day-header"><span>&#127828;</span> Day 3 &mdash; Mon 24 Nov &middot; Kuhflucht Waterfalls, English Garden &amp; GOP Musical</div>
+<div class="day-header"><span>&#127828;</span> Day 3 &mdash; Sun 22 Nov &middot; Kuhflucht Waterfalls, English Garden &amp; Nymphenburg</div>
 
 <div class="map-section">
-<div class="map-h">&#128205; Munich &rarr; Kuhflucht Waterfalls &rarr; English Garden &rarr; GOP Musical &rarr; Airport</div>
-<iframe loading="lazy" src="https://maps.google.com/maps?saddr=Munich+Hauptbahnhof&daddr=Farchant+Kuhfluchtwasserf%C3%A4lle+to:Englischer+Garten+Munich+to:Munich+Airport&output=embed" allowfullscreen></iframe>
-<a class="map-link" href="https://www.google.com/maps/dir/Munich+Hauptbahnhof/Kuhfluchtwasserf%C3%A4lle+Farchant/Englischer+Garten+Munich/Munich+Airport" target="_blank">Open route in Google Maps</a>
+<div class="map-h">&#128205; Munich &rarr; Kuhflucht Waterfalls &rarr; English Garden &rarr; Nymphenburg Palace</div>
+<iframe loading="lazy" src="https://maps.google.com/maps?saddr=Munich+Hauptbahnhof&daddr=Farchant+Kuhfluchtwasserf%C3%A4lle+to:Englischer+Garten+Munich+to:Nymphenburg+Palace+Munich&output=embed" allowfullscreen></iframe>
+<a class="map-link" href="https://www.google.com/maps/dir/Munich+Hauptbahnhof/Kuhfluchtwasserf%C3%A4lle+Farchant/Englischer+Garten+Munich/Nymphenburg+Palace+Munich" target="_blank">Open route in Google Maps</a>
 </div>
 
 <div class="stop">
 <div class="stop-time">07:30</div><div class="stop-icon">&#128646;</div>
-<div class="stop-detail"><div class="stop-name">Train to Farchant / Garmisch-Partenkirchen</div><div class="stop-desc">Early RE or RB from Munich Hbf toward Garmisch-Partenkirchen, get off at Farchant (~1h). Bayern-Ticket covers regional trains (&euro;34 for family). The scenery from Munich to the Alps is stunning &mdash; the Alps become visible after about 45 minutes. <strong>Source: <a href="https://www.outdoormunich.com" target="_blank">outdoormunich.com</a></strong></div><div class="stop-drive">Train &middot; RE/RB to Farchant, ~1h (Bayern-Ticket)</div></div>
+<div class="stop-detail"><div class="stop-name">Train to Farchant</div><div class="stop-desc">Early RE or RB from Munich Hbf toward Garmisch-Partenkirchen, get off at Farchant (~1h). Bayern-Ticket covers regional trains (&euro;34 for family). The scenery from Munich to the Alps is stunning &mdash; the Alps become visible after about 45 minutes. <strong>Source: <a href="https://www.outdoormunich.com" target="_blank">outdoormunich.com</a></strong></div><div class="stop-drive">Train &middot; RE/RB to Farchant, ~1h (Bayern-Ticket)</div></div>
 </div>
 <div class="stop">
 <div class="stop-time">09:00</div><div class="stop-icon">&#128167;</div>
-<div class="stop-detail"><div class="stop-name">Kuhfluchtwasserf&auml;lle <span class="must-see">&#9733; Spectacle</span></div><div class="stop-desc">Germany's tallest waterfall group! Three cascading tiers plunging a total of <strong>270 meters</strong> through the Ester Mountains. The short family loop is 3.9 km (~1h15) with the lower sections on flat forest paths (stroller-friendly) and upper sections rocky (carrier needed). Free entry, open year-round. The forest adventure trail (Walderlebnispfad) has information stations and viewing platforms. In November, expect powerful water flow from autumn rain. <strong>Source: <a href="https://www.outdoormunich.com" target="_blank">outdoormunich.com</a> + <a href="https://www.alltrails.com/trail/germany/bavaria/walderlebnispfad-farchant" target="_blank">alltrails.com</a></strong></div>
+<div class="stop-detail"><div class="stop-name">Kuhfluchtwasserf&auml;lle <span class="must-see">&#9733; Must-See</span></div><div class="stop-desc">Germany's tallest waterfall group! Three cascading tiers plunging a total of <strong>270 meters</strong> through the Ester Mountains. The short family loop is 3.9 km (~1h15) with the lower sections on flat forest paths (stroller-friendly) and upper sections rocky (carrier needed). Free entry, open year-round. In November, expect powerful water flow from autumn rain. <strong>Source: <a href="https://www.outdoormunich.com" target="_blank">outdoormunich.com</a> + <a href="https://www.alltrails.com/trail/germany/bavaria/walderlebnispfad-farchant" target="_blank">alltrails.com</a></strong></div>
 <div class="stop-imgs">
 <img src="https://images.pexels.com/photos/29272542/pexels-photo-29272542.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Kuhflucht waterfall Farchant Bavaria nature" loading="lazy">
 <img src="https://images.pexels.com/photos/29272543/pexels-photo-29272543.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Kuhflucht waterfall turquoise pool Farchant" loading="lazy">
@@ -333,15 +326,15 @@ a.act-book:hover{background:#1e40af;color:#fff;border-color:#1e40af}
 </div>
 <div class="stop">
 <div class="stop-time">10:30</div><div class="stop-icon">&#128646;</div>
-<div class="stop-detail"><div class="stop-name">Train back to Munich</div><div class="stop-desc">After the waterfall walk, catch the train back from Farchant (~1h). Head straight to the English Garden for the afternoon.</div><div class="stop-drive">Train &middot; RE/RB, ~1h back to Munich</div></div>
+<div class="stop-detail"><div class="stop-name">Train back to Munich</div><div class="stop-desc">After the waterfall walk, catch the train back from Farchant (~1h). Head to the English Garden for the afternoon.</div><div class="stop-drive">Train &middot; RE/RB, ~1h back to Munich</div></div>
 </div>
 <div class="stop">
-<div class="stop-time">12:00</div><div class="stop-icon">&#127806;</div>
-<div class="stop-detail"><div class="stop-name">Lunch: Bodhi</div><div class="stop-desc">One of Munich's best vegan spots &mdash; classic Bavarian tavern atmosphere (<em>Wirtshausatmosph&uuml;re</em>) with a fully plant-based menu. Traditional feels with modern vegan dishes.</div></div>
+<div class="stop-time">12:00</div><div class="stop-icon">&#127860;</div>
+<div class="stop-detail"><div class="stop-name">Lunch: Ahimsa</div><div class="stop-desc">Vegan Asian in Untergiesing &mdash; ramen, sushi, udon, coconut curry. Quick, delicious, and totally plant-based.</div></div>
 </div>
 <div class="stop">
 <div class="stop-time">13:15</div><div class="stop-icon">&#127806;</div>
-<div class="stop-detail"><div class="stop-name">Englischer Garten <span class="must-see">&#9733; Nature</span></div><div class="stop-desc">Europe's largest urban park (376 hectares &mdash; 4&times; Central Park)! Flat paths perfect for the stroller. The highlights: the <strong>Eisbach Wave</strong> (a permanent standing wave where surfers ride year-round &mdash; free show!), the <strong>Monopteros</strong> lookout hill with panoramic views over Munich, the <strong>Chinese Tower</strong> beer garden, and peaceful meadows. In November, the autumn foliage adds golden colors. <strong>Source: <a href="https://www.muenchen.de/en/sights/attractions/english-garden" target="_blank">muenchen.de</a></strong></div>
+<div class="stop-detail"><div class="stop-name">Englischer Garten <span class="must-see">&#9733; Must-See</span></div><div class="stop-desc">Europe's largest urban park (376 hectares &mdash; 4&times; Central Park)! Flat paths perfect for the stroller. The highlights: the <strong>Eisbach Wave</strong> (a permanent standing wave where surfers ride year-round &mdash; free show!), the <strong>Monopteros</strong> lookout hill with panoramic views over Munich, the <strong>Chinese Tower</strong> beer garden, and peaceful meadows. <strong>Source: <a href="https://www.muenchen.de/en/sights/attractions/english-garden" target="_blank">muenchen.de</a></strong></div>
 <div class="stop-imgs">
 <img src="https://images.pexels.com/photos/33808951/pexels-photo-33808951.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Monopteros English Garden Munich view" loading="lazy">
 <img src="https://images.pexels.com/photos/38169910/pexels-photo-38169910.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Eisbach wave surfing English Garden Munich" loading="lazy">
@@ -351,7 +344,7 @@ a.act-book:hover{background:#1e40af;color:#fff;border-color:#1e40af}
 </div>
 <div class="stop">
 <div class="stop-time">14:45</div><div class="stop-icon">&#127963;</div>
-<div class="stop-detail"><div class="stop-name">Nymphenburg Palace <span class="birthday-tag">&#10084; Birthday</span></div><div class="stop-desc">Munich's "Versailles" &mdash; a stunning Baroque palace with vast formal gardens, canals, and the beautiful Amalienburg hunting lodge. The flat palace grounds are perfect for stroller walks. The romantic canal and mirror pools are gorgeous in autumn light. See the famous Love Tree where couples leave locks and vows. <strong>Source: <a href="https://www.muenchen.de/en/sights/sightseeing-25-top-sights-and-attractions-munich" target="_blank">muenchen.de</a></strong></div>
+<div class="stop-detail"><div class="stop-name">Nymphenburg Palace <span class="must-see">&#9733; Must-See</span></div><div class="stop-desc">Munich's "Versailles" &mdash; a stunning Baroque palace with vast formal gardens, canals, and the beautiful Amalienburg hunting lodge. The flat palace grounds are perfect for stroller walks. The romantic canal and mirror pools are gorgeous in autumn light. See the famous Love Tree where couples leave locks and vows. <strong>Source: <a href="https://www.muenchen.de/en/sights/sightseeing-25-top-sights-and-attractions-munich" target="_blank">muenchen.de</a></strong></div>
 <div class="stop-imgs">
 <img src="https://images.pexels.com/photos/37277639/pexels-photo-37277639.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Nymphenburg Palace fountain Munich" loading="lazy">
 <img src="https://images.pexels.com/photos/37277644/pexels-photo-37277644.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Nymphenburg Palace elegant view fountain pond" loading="lazy">
@@ -361,64 +354,80 @@ a.act-book:hover{background:#1e40af;color:#fff;border-color:#1e40af}
 </div>
 <div class="stop">
 <div class="stop-time">16:30</div><div class="stop-icon">&#127968;</div>
-<div class="stop-detail"><div class="stop-name">Checkout &amp; pack for flight</div><div class="stop-desc">Drop bags at hotel if not already done. Quick trip to Kaufingerstrasse (pedestrian shopping street) for last-minute souvenirs &mdash; German Christmas ornaments, Lebkuchen gingerbread to take home.</div></div>
+<div class="stop-detail"><div class="stop-name">Pack for flight &amp; check out</div><div class="stop-desc">Final afternoon! Quick trip to Kaufingerstrasse (pedestrian shopping street) for last-minute souvenirs &mdash; German Christmas ornaments, Lebkuchen gingerbread to take home.</div></div>
 </div>
 <div class="stop">
 <div class="stop-time">17:30</div><div class="stop-icon">&#127909;</div>
-<div class="stop-detail"><div class="stop-name">GOP Musical: "Jim Knopf und die Wilde 13" <span class="must-see">&#9733; Theatre</span></div><div class="stop-desc"><strong>Wife's birthday evening entertainment!</strong> The famous GOP Variet&eacute;-Theater presents Michael Ende's beloved children's story as a colorful family musical. Spectacular costumes, catchy songs, giant puppets, and magical stage effects. Running from Nov 8, 2026 through Jan 2027. Baby can sit on lap, enjoy the music and spectacle. Shows are at 19:30 (check for matinees). Tickets from ~&euro;24. <strong>Source: <a href="https://www.variete.de/muenchen/angebote" target="_blank">variete.de</a></strong></div>
+<div class="stop-detail"><div class="stop-name">GOP Musical: "Jim Knopf und die Wilde 13" <span class="must-see">&#9733; Must-See</span></div><div class="stop-desc"><strong>Evening entertainment!</strong> The famous GOP Variet&eacute;-Theater presents Michael Ende's beloved children's story as a colorful family musical. Spectacular costumes, catchy songs, giant puppets, and magical stage effects. Running from Nov 8, 2026 through Jan 2027. Baby can sit on lap, enjoy the music and spectacle. Shows at 19:30 (check for matinees). Tickets from ~&euro;24. <strong>Source: <a href="https://www.variete.de/muenchen/angebote" target="_blank">variete.de</a></strong></div>
 <div class="stop-drive">Walk &middot; 5 min from Hauptbahnhof (Schwanthalerstrasse)</div>
 <div class="stop-acts"><div class="acts-heading">&#127919; Activities</div><div class="act-row"><span class="act-badge act-couple">&#127909; Family musical evening</span><a class="act-book" style="background:#ede9fe;color:#5b21b6;border-color:#ede9fe" href="https://www.variete.de/ticketshop" target="_blank">Book at GOP</a></div></div></div>
 </div>
+<div class="stop">
+<div class="stop-time">21:00</div><div class="stop-icon">&#127860;</div>
+<div class="stop-detail"><div class="stop-name">Dinner: Gratitude <span class="cafe-tag">Vegan</span></div><div class="stop-desc">Munich's top vegan fine-dining &mdash; artful plating, changing menu (chickpea curry, tempeh ravioli, grilled avocado), excellent vegan wine list. Intimate, romantic setting in Maxvorstadt. <a href="https://www.resy.com/cities/munich/gratitude-vegan-restaurant" target="_blank">Book on Resy</a></div></div>
+</div>
 </div>
 
-<div class="day day3">
-<div class="day-header" style="background:#fce7f3;color:#9d174d"><span>&#9992;&#65039;</span> Day 4 &mdash; Tue 25 Nov &middot; Fly Home</div>
+<!-- ================================================================ -->
+<!-- DAY 4 RETURN OPTIONS -->
+<!-- ================================================================ -->
 
+<div class="info-box">
+<h3>&#9992;&#65039; Return to Dublin &mdash; Sunday Night 22 Nov (Only Option)</h3>
+<p style="font-size:.84rem;color:#4b5563;margin-bottom:.6rem">Need to be at <strong>Sandyford by 9:00 Mon 23rd</strong> (&sim;30 min from DUB) = airport by ~8:00am. The earliest Mon flight (VL 2516) lands 10:05 &mdash; too late. <strong>Sunday night is the only return option.</strong></p>
+<table class="pt-table">
+<thead><tr><th>Flight</th><th>Departs MUC</th><th>Arrives DUB</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>VL 2518</strong> Air VIA</td><td>15:40</td><td>17:10</td><td>Home by 5pm. Skip GOP musical, wrap sights by ~14:00.</td></tr>
+<tr><td><strong>EI 357</strong> Aer Lingus</td><td>20:15</td><td>21:55</td><td>After GOP musical. Full Sunday day + evening. &#9989;&#65039; Recommended</td></tr>
+</tbody>
+</table>
+<p class="pt-note">&#128666; <strong>DUB &rarr; Sandyford</strong>: &sim;30 min by car (N11/M50). Pre-book a taxi or transfer for late-night arrival.</p>
+</div>
+
+<div class="day day4a">
+<div class="day-header"><span>&#9992;&#65039;</span> Return &mdash; Sun 22 Nov Evening</div>
 <div class="stop">
-<div class="stop-time">08:30</div><div class="stop-icon">&#127860;</div>
-<div class="stop-detail"><div class="stop-name">Breakfast &amp; final morning</div><div class="stop-desc">Last Bavarian morning! Quick breakfast at the hotel or nearby caf&eacute;. If the baby's schedule allows, a final stroll through Marienplatz in the morning light.</div></div>
+<div class="stop-time">22:15 (or 17:30)</div><div class="stop-icon">&#128646;</div>
+<div class="stop-detail"><div class="stop-name">U-Bahn / S-Bahn to Munich Airport</div><div class="stop-desc">Direct U6 from Goethepl. to Olympiapark, then S1 to airport (~45 min total from GOP theater). Or taxi (~25 min, &euro;50-60).</div><div class="stop-drive">Train &middot; U6 + S1, ~45 min</div></div>
 </div>
 <div class="stop">
-<div class="stop-time">10:00</div><div class="stop-icon">&#128646;</div>
-<div class="stop-detail"><div class="stop-name">S-Bahn to Munich Airport</div><div class="stop-desc">Direct S-Bahn S1 from Hauptbahnhof to the airport &mdash; 40 min, simple and reliable. Allow plenty of time with the baby and stroller.</div><div class="stop-drive">Train &middot; S-Bahn S1, ~40 min to MUC</div></div>
-</div>
-<div class="stop">
-<div class="stop-time">10:50</div><div class="stop-icon">&#9992;&#65039;</div>
-<div class="stop-detail"><div class="stop-name">Flight Munich &rarr; Dublin &mdash; <strong>EI 353</strong></div><div class="stop-desc"><strong>Aer Lingus EI 353</strong> departs 10:50, arrives 12:25 (2h35). Home in time for lunch. Alternative: <strong>VL 2516</strong> (Air VIA) 08:30&ndash;10:05 if you prefer earlier. On the plane: photos of Neuschwanstein, the waterfalls, the musical, and the birthday celebration. Auf Wiedersehen, M&uuml;nchen! &#127883;</div></div>
+<div class="stop-time">20:15 (or 15:40)</div><div class="stop-icon">&#9992;&#65039;</div>
+<div class="stop-detail"><div class="stop-name">Flight Munich &rarr; Dublin</div><div class="stop-desc"><strong>EI 357</strong> (Aer Lingus) 20:15&ndash;21:55 &mdash; after the musical, home in time for bed. Or <strong>VL 2518</strong> (Air VIA) 15:40&ndash;17:10 &mdash; home for early evening, skip the musical. Auf Wiedersehen, M&uuml;nchen! &#127883;</div></div>
 </div>
 </div>
 
 <!-- ====== INFO BOXES ====== -->
 
 <div class="info-box">
-<h3>&#127968; Where to Stay &mdash; Hotels near Hauptbahnhof / Marienplatz</h3>
+<h3>&#127968; Where to Stay &mdash; Hotels near Hauptbahnhof</h3>
 <div class="hotel-grid">
 <div class="hotel-card">
 <h4>&#128135; Cocoon Hotel Hauptbahnhof</h4>
 <span class="hotel-tag tag-baby">&#128135; Baby-friendly</span><span class="hotel-tag tag-elevator">&#128272; Elevator</span><span class="hotel-tag tag-budget">&#128176; Value</span>
 <div class="price">From ~&euro;80/night</div>
-<div class="details">Right at Hauptbahnhof. Free cots, bottle warmers, high chairs on request. Children under 10 stay FREE. Elevators. Alpine cozy design. 80% baby-friendly rating. <strong>Book: <a href="https://www.booking.com/hotel/de/cocoon-hauptbahnhof.html" target="_blank">Booking.com</a></strong> / <strong><a href="https://cocoon-hotels.com/en/cocoon-hauptbahnhof/" target="_blank">cocoon-hotels.com</a></strong></div>
+<div class="details">Right at Hauptbahnhof. Free cots, bottle warmers, high chairs on request. Children under 10 stay FREE. Elevators. 80% baby-friendly rating. <strong>Book: <a href="https://www.booking.com/hotel/de/cocoon-hauptbahnhof.html" target="_blank">Booking.com</a></strong> / <strong><a href="https://cocoon-hotels.com/en/cocoon-hauptbahnhof/" target="_blank">cocoon-hotels.com</a></strong></div>
 <a class="book-link" href="https://www.booking.com/hotel/de/cocoon-hauptbahnhof.html" target="_blank">Check Availability &rarr;</a>
 </div>
 <div class="hotel-card">
-<h4>&#127971; Louis Hotel am Viktualienmarkt</h4>
+<h4>&#128205; Louis Hotel am Viktualienmarkt</h4>
 <span class="hotel-tag tag-center">&#128205; City Center</span><span class="hotel-tag tag-baby">&#128135; Family</span>
 <div class="price">From ~&euro;150/night</div>
-<div class="details">Steps from Marienplatz and Viktualienmarkt. Stylish rooms with French balconies, Japanese restaurant. Family-friendly atmosphere, elevators. Best location for exploring on foot. <strong>Book: <a href="https://www.booking.com/hotel/de/louis.html" target="_blank">Booking.com</a></strong> / <strong><a href="https://www.louis-hotel.com" target="_blank">louis-hotel.com</a></strong></div>
+<div class="details">Steps from Marienplatz. Stylish rooms with French balconies, Japanese restaurant. Family-friendly, elevators. Best location for walking to sights. <strong>Book: <a href="https://www.booking.com/hotel/de/louis.html" target="_blank">Booking.com</a></strong> / <strong><a href="https://www.louis-hotel.com" target="_blank">louis-hotel.com</a></strong></div>
 <a class="book-link" href="https://www.booking.com/hotel/de/louis.html" target="_blank">Check Availability &rarr;</a>
 </div>
 <div class="hotel-card">
 <h4>&#128176; a&o M&uuml;nchen Hauptbahnhof</h4>
 <span class="hotel-tag tag-budget">&#128176; Budget</span><span class="hotel-tag tag-elevator">&#128272; Elevator</span>
 <div class="price">From ~&euro;50/night</div>
-<div class="details">Modern hotel right at Hauptbahnhof. Clean, functional rooms. Good for budget travelers. Free WiFi, nearby supermarket for baby supplies. <strong>Book: <a href="https://www.booking.com/hotel/de/munchenhotelcityao.html" target="_blank">Booking.com</a></strong> / <strong><a href="https://www.ahotels.com" target="_blank">ahotels.com</a></strong></div>
+<div class="details">Modern hotel at Hauptbahnhof. Clean, functional. Free WiFi, nearby supermarket. <strong>Book: <a href="https://www.booking.com/hotel/de/munchenhotelcityao.html" target="_blank">Booking.com</a></strong></div>
 <a class="book-link" href="https://www.booking.com/hotel/de/munchenhotelcityao.html" target="_blank">Check Availability &rarr;</a>
 </div>
 <div class="hotel-card">
 <h4>&#9733; Hotel Amba</h4>
 <span class="hotel-tag tag-elevator">&#128272; Elevator</span><span class="hotel-tag tag-center">&#128205; Near Hbf</span>
 <div class="price">From ~&euro;80/night</div>
-<div class="details">Next to Hauptbahnhof, 10-min walk to Marienplatz. Modern rooms, private bathrooms. Soundproofed windows. Great value for the location. <strong>Book: <a href="https://www.booking.com/hotel/de/hotelamba.html" target="_blank">Booking.com</a></strong></div>
+<div class="details">Next to Hauptbahnhof, 10-min walk to Marienplatz. Modern rooms, soundproofed windows. <strong>Book: <a href="https://www.booking.com/hotel/de/hotelamba.html" target="_blank">Booking.com</a></strong></div>
 <a class="book-link" href="https://www.booking.com/hotel/de/hotelamba.html" target="_blank">Check Availability &rarr;</a>
 </div>
 </div>
@@ -429,7 +438,7 @@ a.act-book:hover{background:#1e40af;color:#fff;border-color:#1e40af}
 <ul>
 <li><strong>Safest city</strong>: Munich tops Germany's police safety stats for 7 consecutive years</li>
 <li><strong>LOW crime threat</strong>: US OSAC rates Munich LOW vs Berlin/Hamburg/Frankfurt MEDIUM</li>
-<li><strong>No protests on our dates</strong>: Nov 20 protests are over by Sat Nov 22. Our trip window is clear.</li>
+<li><strong>Nov 20 protest is one-day only</strong>: "Gen Z regelt" demo in Munich city center on our arrival day, afternoon/evening. Airport transfer and sights are unaffected.</li>
 <li><strong>Baby infrastructure</strong>: Wide sidewalks, smooth paving, lifts at all major stations, baby-changing at airports and train stations</li>
 <li><strong>Bavaria = safest state</strong>: Lowest crime rates in Germany overall</li>
 </ul>
@@ -438,34 +447,35 @@ a.act-book:hover{background:#1e40af;color:#fff;border-color:#1e40af}
 <div class="info-box">
 <h3>&#127869; Food &amp; Drink (100% Plant-Based)</h3>
 <ul>
-<li>&#127806; <strong>Gratitude</strong> (Maxvorstadt) &mdash; upscale vegan fine dining, changing menu, great vegan wine list. <em>Birthday dinner spot.</em> <a href="https://www.resy.com/cities/munich/gratitude-vegan-restaurant" target="_blank">Book on Resy</a></li>
-<li>&#127806; <strong>Max Pett</strong> (Sendlinger Tor) &mdash; Munich's classic vegan spot, extensive menu, schnitzel, bowls, desserts</li>
+<li>&#127806; <strong>Gratitude</strong> (Maxvorstadt) &mdash; upscale vegan fine dining, changing menu, vegan wine list. <a href="https://www.resy.com/cities/munich/gratitude-vegan-restaurant" target="_blank">Book on Resy</a></li>
+<li>&#127806; <strong>Max Pett</strong> (Sendlinger Tor) &mdash; Munich's classic vegan spot, schnitzel, bowls, desserts</li>
 <li>&#127806; <strong>Leibspeise</strong> (T&uuml;rkenstrasse) &mdash; vegetarian with strong vegan daily specials, Bavarian tavern feel</li>
-<li>&#127806; <strong>Bodhi</strong> &mdash; traditional <em>Wirtshaus</em> atmosphere, fully plant-based, local favorite</li>
-<li>&#127806; <strong>Sattler</strong> (near K&ouml;nigsplatz) &mdash; creative plant-based cooking beyond salads and bowls</li>
+<li>&#127806; <strong>Bodhi</strong> &mdash; traditional <em>Wirtshaus</em> atmosphere, fully plant-based</li>
 <li>&#127806; <strong>Ahimsa</strong> (Untergiesing) &mdash; vegan Asian: ramen, sushi, udon, coconut curry</li>
+<li>&#127806; <strong>Sattler</strong> (near K&ouml;nigsplatz) &mdash; creative plant-based cooking beyond salads and bowls</li>
 <li>&#127793; <strong>Non-alcoholic drinks</strong>: Hot chocolate (heisser Schokoladen), apple juice (Apfelsaft), chai tea, sparkling water (Mineralwasser)</li>
-<li>&#127861; <strong>Christmas treats</strong>: <em>Lebkuchen</em> (gingerbread &mdash; many vegan versions), <em>Zuckerkn&ouml;del</em> (sugar dumplings), <em>Maronen</em> (roasted chestnuts)</li>
+<li>&#127861; <strong>Christmas treats</strong>: <em>Lebkuchen</em> (gingerbread &mdash; vegan versions available), <em>Zuckerkn&ouml;del</em> (sugar dumplings), <em>Maronen</em> (roasted chestnuts)</li>
 </ul>
 </div>
 
 <div class="info-box">
-<h3>&#9992;&#65039; Flights (Nov 22 &ndash; 25, 2026)</h3>
+<h3>&#9992;&#65039; Flights (Nov 19/20 &ndash; 22, 2026)</h3>
 <table class="pt-table">
-<thead><tr><th></th><th>Outbound (Sat 22 Nov)</th><th>Return (Tue 25 Nov)</th></tr></thead>
+<thead><tr><th></th><th>Outbound</th><th>Return (Sun 22 Nov)</th></tr></thead>
 <tbody>
 <tr><td class="pt-day"><strong>&#9989;&#65039; Selected</strong></td>
-<td><strong>VL 2517</strong> Air VIA &bull; 10:50 &rarr; 14:05 (2h15)<br>Good timing with baby, full afternoon</td>
-<td><strong>EI 353</strong> Aer Lingus &bull; 10:50 &rarr; 12:25 (2h35)<br>Home in time for lunch</td></tr>
-<tr><td class="pt-day"><strong>&#128260; Early Option</strong></td>
-<td><strong>EI 352</strong> Aer Lingus &bull; 06:40 &rarr; 10:05 (2h25)<br>Maximizes Day 1</td>
-<td><strong>VL 2516</strong> Air VIA &bull; 08:30 &rarr; 10:05 (2h35)<br>Earliest home</td></tr>
+<td><strong>VL 2517</strong> Air VIA &bull; Fri 10:50 &rarr; 14:05 (2h15)</td>
+<td><strong>EI 357</strong> Aer Lingus &bull; 20:15 &rarr; 21:55 (2h40)</td></tr>
+<tr><td class="pt-day"><strong>&#128260; Alternative</strong></td>
+<td><strong>EI 352</strong> Aer Lingus &bull; 06:40 &rarr; 10:10 (2h30) — Thu 19th or Fri 20th</td>
+<td><strong>VL 2518</strong> Air VIA &bull; 15:40 &rarr; 17:10 (2h30)</td></tr>
 <tr><td class="pt-day"><strong>&#8364; Price</strong></td>
 <td colspan="2" style="text-align:center">Round-trip from <strong>~&euro;96</strong> (Air VIA), <strong>~&euro;148</strong> (Aer Lingus). Book on <a href="https://www.google.com/travel/flights" target="_blank">Google Flights</a> / <a href="https://www.aerlingus.com" target="_blank">Aer Lingus</a> / <a href="https://flyavia.com" target="_blank">Air VIA</a></td></tr>
 </tbody>
 </table>
+<p class="pt-note">&#9992;&#65039; <strong>Thu evening option</strong>: EI 352 departs Thu 19th 06:40&ndash;10:10 (Munich) = extra half day in Munich before the main 3 days. Gives you 3.5 days instead of 3.</p>
 <p class="pt-note">&#9992;&#65039; <strong>Air VIA (VL)</strong> is Lufthansa's low-cost subsidiary &mdash; same group, no frills. <strong>Aer Lingus (EI)</strong> is full-service with meals included.</p>
-<p class="pt-note">&#128135; <strong>Baby on flights</strong>: Infant flies on lap for ~15% of adult fare. Bring birth certificate or passport. Short-haul = no bassinets, but request baby amenities.</p>
+<p class="pt-note">&#128135; <strong>Baby on flights</strong>: Infant flies on lap for ~15% of adult fare. Bring birth certificate or passport.</p>
 <p class="pt-note">&#128274; <strong>Baggage</strong>: Air VIA = carry-on only base fare. Aer Lingus = 1 cabin bag + 1 small bag included. Most airlines allow a diaper bag free.</p>
 </div>
 
@@ -474,29 +484,29 @@ a.act-book:hover{background:#1e40af;color:#fff;border-color:#1e40af}
 <table class="pt-table">
 <thead><tr><th>Leg</th><th>Route</th><th>Mode</th><th>Time</th><th>Cost</th></tr></thead>
 <tbody>
-<tr><td class="pt-day">MUC</td><td>Airport &rarr; city center</td><td>S-Bahn S1/S8</td><td>~40 min</td><td>&euro;4.30</td></tr>
+<tr><td class="pt-day">Day 1</td><td>Airport &rarr; city center</td><td>S-Bahn S1/S8</td><td>~40 min</td><td>&euro;4.30</td></tr>
 <tr><td class="pt-day">Day 2</td><td>Munich &harr; F&uuml;ssen</td><td>RE/RB (Bayern-Ticket)</td><td>~2h18</td><td>&euro;34/family</td></tr>
 <tr><td class="pt-day">Day 3</td><td>Munich &harr; Farchant</td><td>RE/RB (Bayern-Ticket)</td><td>~1h</td><td>&euro;34/family</td></tr>
-<tr><td class="pt-day">Day 4</td><td>City &rarr; Airport</td><td>S-Bahn S1</td><td>~40 min</td><td>&euro;4.30</td></tr>
+<tr><td class="pt-day">Return</td><td>City &rarr; Airport</td><td>S-Bahn S1</td><td>~40 min</td><td>&euro;4.30</td></tr>
 </tbody>
 </table>
 <p class="pt-note">&#128241; <strong>Apps</strong>: <a href="https://www.bahn.de/" target="_blank">DB Navigator</a> for German trains, <a href="https://www.mvg.de/" target="_blank">MVG</a> for Munich S-Bahn/U-Bahn</p>
 <p class="pt-note">&#128135; <strong>Baby</strong>: All major stations have lifts, baby-changing rooms. Bayern-Ticket covers up to 5 people on regional trains for &euro;34.</p>
-<p class="pt-note">&#128176; <strong>Neuschwanstein ticket</strong>: &euro;21 + &euro;2.50 booking fee per adult, free under 18. <strong>Book online at <a href="https://www.neuschwanstein.de/englisch/booking/" target="_blank">neuschwanstein.de</a></strong> &mdash; sells out by 9 AM on day-of!</p>
+<p class="pt-note">&#128176; <strong>Neuschwanstein ticket</strong>: &euro;21 + &euro;2.50 booking fee per adult, free under 18. <strong>Book online at <a href="https://www.neuschwanstein.de/englisch/booking/" target="_blank">neuschwanstein.de</a></strong> &mdash; sells out by 9 AM!</p>
 </div>
 
 <div class="info-box">
 <h3>&#128161; Tips</h3>
 <ul>
 <li><strong>Weather</strong>: November Munich is 2&ndash;8&deg;C, likely rain. Pack waterproof layers, warm hats for baby and adults, waterproof stroller cover</li>
-<li><strong>Neuschwanstein</strong>: Book castle tour online WEEKS ahead. Arrive early. The Marienbr&uuml;cke walk is steep (20 min each way) &mdash; bring baby carrier. If foggy, the castle view from the bridge may be obscured.</li>
-<li><strong>Zugspitze (Top of Germany)</strong>: Germany's highest peak (2,962m) is ~1.5h by train. Cable cars closed Nov 23&ndash;26 for maintenance. <strong>Partnachklamm Gorge</strong> in Garmisch is open (&euro;10, 8&ndash;18) if you want to swap Kuhflucht for it.</li>
-<li><strong>Book ahead</strong>: Gratitude (birthday dinner), Neuschwanstein castle tour, GOP musical tickets</li>
-<li><strong>Currency</strong>: Euros (&euro;). Most places accept cards, but keep &euro;50&ndash;100 cash for markets and small purchases</li>
+<li><strong>Neuschwanstein</strong>: Book castle tour online WEEKS ahead. Arrive early. The Marienbr&uuml;cke walk is steep (20 min each way) &mdash; bring baby carrier. If foggy, the castle view may be obscured.</li>
+<li><strong>Zugspitze (Top of Germany)</strong>: Cable cars closed Nov 23&ndash;26 for maintenance. <strong>Partnachklamm Gorge</strong> in Garmisch is open (&euro;10) if you want an alternative.</li>
+<li><strong>Book ahead</strong>: Neuschwanstein castle tour, GOP musical tickets, restaurants</li>
+<li><strong>Currency</strong>: Euros (&euro;). Most places accept cards, keep &euro;50&ndash;100 cash for markets</li>
 <li><strong>Passports</strong>: Carry them (Irish citizens need valid passport for Germany). Store baby's passport copy digitally</li>
-<li><strong>EU Health Insurance Card</strong>: Get one for the baby before traveling &mdash; free at any Irish pharmacy</li>
-<li><strong>Best photo light</strong>: Dark by 16:00 in November. Do outdoor sights before 15:00, museums/theatre after dark</li>
-<li><strong>Stroller storage</strong>: Trains have dedicated spaces, S-Bahn has luggage areas. Consider a lightweight umbrella stroller</li>
+<li><strong>EU Health Insurance Card</strong>: Get one for baby before traveling &mdash; free at any Irish pharmacy</li>
+<li><strong>Best photo light</strong>: Dark by 16:00 in November. Do outdoor sights before 15:00, indoor after</li>
+<li><strong>Stroller storage</strong>: Trains have dedicated spaces, S-Bahn has luggage areas. Lightweight umbrella stroller recommended</li>
 </ul>
 </div>
 
@@ -514,7 +524,6 @@ a.act-book:hover{background:#1e40af;color:#fff;border-color:#1e40af}
 </div>
 
 <script>
-// Lightbox gallery
 var lbImages=[],lbIdx=0;
 document.querySelectorAll('.stop-imgs img').forEach(function(img){img.addEventListener('click',function(e){e.stopPropagation();var p=img.closest('.stop-imgs');lbImages=[];Array.from(p.querySelectorAll('img')).forEach(function(s){if(lbImages.indexOf(s.src)===-1)lbImages.push(s.src)});lbIdx=lbImages.indexOf(this.src);openLightbox(this.src)})});
 function openLightbox(src){document.getElementById('lightbox-img').src=src;document.getElementById('lightbox').classList.add('active');document.body.style.overflow='hidden';document.getElementById('lb-counter').textContent=(lbIdx+1)+' / '+lbImages.length}
@@ -523,7 +532,6 @@ function prevImage(){if(!lbImages.length)return;lbIdx=(lbIdx-1+lbImages.length)%
 function nextImage(){if(!lbImages.length)return;lbIdx=(lbIdx+1)%lbImages.length;document.getElementById('lightbox-img').src=lbImages[lbIdx];document.getElementById('lb-counter').textContent=(lbIdx+1)+' / '+lbImages.length}
 document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLightbox();if(!document.getElementById('lightbox').classList.contains('active'))return;if(e.key==='ArrowLeft')prevImage();if(e.key==='ArrowRight')nextImage()});
 (function(){var lb=document.getElementById('lightbox'),sx=0;lb.addEventListener('touchstart',function(e){sx=e.changedTouches[0].screenX},{passive:true});lb.addEventListener('touchend',function(e){var dx=sx-e.changedTouches[0].screenX;if(Math.abs(dx)>50){if(dx>0)nextImage();else prevImage()}},{passive:true})})();
-// Hero slideshow
 let slideIdx=0,heroTimer;const hSlides=document.querySelectorAll('.hero-slide'),hDots=document.querySelectorAll('.hero-dot');
 function goToHero(n){hSlides.forEach(function(s){s.classList.remove('active')});hDots.forEach(function(d){d.classList.remove('active')});slideIdx=(n+hSlides.length)%hSlides.length;hSlides[slideIdx].classList.add('active');hDots[slideIdx].classList.add('active');clearInterval(heroTimer);if(hSlides.length>1)heroTimer=setInterval(function(){goToHero(slideIdx+1)},4500)}
 hDots.forEach(function(dot,i){dot.addEventListener('click',function(){goToHero(i)})});
