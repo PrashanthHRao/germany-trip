@@ -45,3 +45,15 @@
 - **Safety findings:** Munich = safest major German city (7 years). Berlin = avoid (protests Nov 14, 20, 25). Nov 20 = "Gen Z regelt" protests in 34 cities including Munich. Germany national terror threat = "high" but Munich crime = LOW. Christmas markets have enhanced security.
 - **Key Decisions:** Munich base (safest city, best vegan scene, direct flights from Dublin). No Berlin, no Rhine valley. Wife's birthday = romantic dinner + Christmas market stroll + special experience (Nymphenburg gondola). All food vegan/veg, no alcohol.
 - **Next Steps:** Build trip-plan.html, create GitHub repo, deploy.
+
+### 2026-11-24 — Session 2
+- **Goal:** Rebuild itinerary: less Christmas market, more nature/spectacles, add musical, hotel booking links, more photos, official German tourist sources
+- **Progress:** Full rebuild:
+  - Day 1: Added **BMW Welt** (free, iconic architecture), **Viktualienmarkt** lunch, **Marienplatz + Glockenspiel**, Christmas market as 30-min evening glow only
+  - Day 2: Nuremberg → **Neuschwanstein Castle** day trip (fairytale spectacle, €23, 2h train each way, source: neuschwanstein.de, muenchen.de)
+  - Day 3: **Kuhflucht Waterfalls** morning (270m cascades, free, 1h train, source: outdoormunich.com), **English Garden + Eisbach + Monopteros** afternoon (source: muenchen.de), **GOP Musical "Jim Knopf und die Wilde 13"** evening (source: variete.de, shows from Nov 8)
+  - **Hotel section** with 4 options + direct booking links: Cocoon Hbf (baby-friendly, free cot, ~€80), Louis Hotel (family, Marienplatz, ~€150), a&o Hbf (budget ~€50), Hotel Amba (near Hbf ~€80)
+  - **~20 new images**: Pexels IDs 37602533, 11030391, 30944546, 30309031, 25675407, 36092695, 15290101, 38658435, 28733357, 16238472, 29272542, 29272545, 33808951, 38169910, 34607644, 37277639, 37277644, 30286140 + Wikimedia for Marienbrücke
+  - Hero slideshow: 5 slides (Marienplatz, Neuschwanstein snow, Nymphenburg, Kuhflucht waterfall, Schwangau)
+  - All sources from muenchen.de, neuschwanstein.de, variete.de, cocoon-hotels.com, visitbayern.de, booking.com
+- **Key Decisions:** Neuschwanstein as big spectacle (Zugspitze closed). Waterfalls for nature. Musical for evening entertainment. Clear hotel booking links.
