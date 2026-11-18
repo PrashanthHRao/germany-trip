@@ -40,6 +40,12 @@
 
 ## Session log
 
+### 2026-11-24 — Session 3
+- **Goal:** Rebuild itinerary with new flights (DUB→FRA 09:10, FRA→MUC 14:15; MUC→DUB direct 08:30 Mon), Sandyford departure timing, hotel checkout decision
+- **Progress:** Full rebuild with connection flights. Day 1: arrive MUC 15:10, check-in, Christmas market + birthday dinner at Gratitude. Day 2: Neuschwanstein. Day 3: Waterfalls, English Garden, Nymphenburg + Christmas market evening. Day 4: checkout Mon morning, S-Bahn 07:10, fly MUC→DUB 08:30, Sandyford by 11am. Removed GOP musical (Day 1 arrival too late). Added birthday tags, Frankfurt connection info, Sandyford timing.
+- **Key Decisions:** Outbound via Frankfurt (EI352 + LH connection, 2h05m layover in T1). Return direct MUC→DUB 08:30. Checkout Mon morning (not airport hotel) — stay in Munich city all weekend, relaxed pace with baby. Leave Sandyford 07:00 outbound. Remove Day 4 options section — single return flight only.
+- **Next Steps:** Deploy to GitHub Pages.
+
 ### 2026-11-12 — Session 1
 - **Goal:** Plan safe 3-day Germany trip for wife's birthday (Nov 22-24/25, 2026), Dublin→Munich, with 8mo baby, vegan/veg only, no alcohol. Research terrarism/riots/protests for safety.
 - **Safety findings:** Munich = safest major German city (7 years). Berlin = avoid (protests Nov 14, 20, 25). Nov 20 = "Gen Z regelt" protests in 34 cities including Munich. Germany national terror threat = "high" but Munich crime = LOW. Christmas markets have enhanced security.
