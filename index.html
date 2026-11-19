@@ -121,6 +121,7 @@ a.act-book:hover{background:#1e40af;color:#fff;border-color:#1e40af}
 .hotel-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:.8rem;margin-top:.5rem}
 .hotel-card{border:1px solid #e5e7eb;border-radius:12px;padding:1rem;transition:box-shadow .2s}
 .hotel-card:hover{box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.hotel-card.booked{border:2px solid #16a34a;background:#f0fdf4;box-shadow:0 0 0 3px rgba(22,163,74,.12)}
 .hotel-card h4{font-size:.88rem;font-weight:700;margin-bottom:.3rem}
 .hotel-card .price{font-size:.82rem;color:#16a34a;font-weight:600}
 .hotel-card .details{font-size:.75rem;color:#6b7280;margin:.3rem 0}
@@ -128,6 +129,7 @@ a.act-book:hover{background:#1e40af;color:#fff;border-color:#1e40af}
 .hotel-card .book-link:hover{background:#1557b0}
 .hotel-tag{display:inline-block;font-size:.62rem;font-weight:600;padding:.1rem .4rem;border-radius:10px;margin-right:.3rem}
 .tag-baby{background:#ecfdf5;color:#059669}
+.tag-booked{background:#16a34a;color:#fff}
 .tag-center{background:#ede9fe;color:#5b21b6}
 .tag-budget{background:#fef3c7;color:#b45309}
 .tag-elevator{background:#eff6ff;color:#1e40af}
@@ -426,6 +428,11 @@ a.act-book:hover{background:#1e40af;color:#fff;border-color:#1e40af}
 <h3>&#127968; Where to Stay &mdash; 3 Nights near Hauptbahnhof</h3>
 <p style="font-size:.82rem;color:#6b7280;margin-bottom:.5rem"><strong>Fri 20 &ndash; Mon 23 Nov (3 nights)</strong> — check out Mon morning, walk to S-Bahn. No need for airport hotel; S-Bahn runs every 10 min to MUC.</p>
 <div class="hotel-grid">
+<div class="hotel-card booked">
+<h4>✈️ Hotel Europäischer Hof München</h4>
+<span class="hotel-tag tag-center">📍 City Center</span><span class="hotel-tag tag-booked">✅ Booked</span>
+<div class="details">4-star hotel in the heart of Munich, steps from Marienplatz, Viktualienmarkt, and public transport. Classic Bavarian comfort, family-friendly rooms, central location for all Day 1 sights. <strong><a href="https://www.booking.com/hotel/de/europaischer-hof-munchen.html" target="_blank">Booking.com</a></strong></div>
+</div>
 <div class="hotel-card">
 <h4>&#128135; Cocoon Hotel Hauptbahnhof</h4>
 <span class="hotel-tag tag-baby">&#128135; Baby-friendly</span><span class="hotel-tag tag-elevator">&#128272; Elevator</span><span class="hotel-tag tag-budget">&#128176; Value</span>
